@@ -1,0 +1,2264 @@
+[ 2018-03-07T00:05:49+08:00 ] 60.205.47.19 123.125.67.166 GET /robots.txt
+[ log ] yuhal.com/robots.txt [运行时间：0.189043s][吞吐率：5.29req/s] [内存消耗：2,120.27kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip',
+  'accept-language' => 'zh-cn,zh-tw',
+  'connection' => 'close',
+  'host' => 'yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T04:26:55+08:00 ] 60.205.47.19 141.8.132.7 GET /robots.txt
+[ log ] www.yuhal.com/robots.txt [运行时间：0.203214s][吞吐率：4.92req/s] [内存消耗：2,119.76kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'connection' => 'Keep-Alive',
+  'from' => 'support@search.yandex.ru',
+  'host' => 'www.yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T04:26:59+08:00 ] 60.205.47.19 141.8.132.7 GET /categories/%E6%95%B0%E6%8D%AE%E5%BA%93
+[ log ] www.yuhal.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93 [运行时间：0.981418s][吞吐率：1.02req/s] [内存消耗：3,371.33kb] [文件加载：48]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'Keep-Alive',
+  'from' => 'support@search.yandex.ru',
+  'host' => 'www.yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+)
+[ info ] [ PARAM ] array (
+  'cate' => '数据库',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Category->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Category.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/category/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'list',
+  4 => 'allart',
+  5 => 'cate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.100421s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.067757s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.067880s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.067662s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.067202s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article_type` [ RunTime:0.068373s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_article_type` WHERE  `yh_b_article_type`.`delete_time` IS NULL  AND `value` = '数据库' LIMIT 1 [ RunTime:0.067278s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.067903s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  type_id = 5 ) [ RunTime:0.067121s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067339s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067279s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T04:35:26+08:00 ] 60.205.47.19 141.8.132.7 GET /details/6
+[ log ] www.yuhal.com/details/6 [运行时间：0.962441s][吞吐率：1.04req/s] [内存消耗：3,405.45kb] [文件加载：49]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'details',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'Keep-Alive',
+  'from' => 'support@search.yandex.ru',
+  'host' => 'www.yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+)
+[ info ] [ PARAM ] array (
+  'id' => '6',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Details->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Details.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/details/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'content',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088266s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.059522s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.059006s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.059478s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.059134s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.059528s ]
+[ sql ] [ SQL ] SELECT `a`.`article_title`,`a`.`create_time`,`a`.`note`,`b`.`color`,`b`.`show_type`,`b`.`value`,`a`.`article_id`,`a`.`tag_ids` FROM `yh_b_article` `a` INNER JOIN `yh_b_article_type` `b` ON `b`.`id`=`a`.`type_id` WHERE  `a`.`delete_time` IS NULL  AND (  article_id=6 ) LIMIT 1 [ RunTime:0.059070s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_des` [ RunTime:0.059519s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_des` WHERE  (  pid=6 ) [ RunTime:0.058925s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL  AND `id` = 3 LIMIT 1 [ RunTime:0.059073s ]
+[ sql ] [ SQL ] SELECT `article_id` FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  article_id < 6 ) ORDER BY create_time desc LIMIT 1 [ RunTime:0.058902s ]
+[ sql ] [ SQL ] SELECT `article_id` FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  article_id > 6 ) ORDER BY article_id asc LIMIT 1 [ RunTime:0.059031s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T04:38:34+08:00 ] 60.205.47.19 121.42.241.1 GET /
+[ log ] yuhal.com/ [运行时间：1.138750s][吞吐率：0.88req/s] [内存消耗：3,335.30kb] [文件加载：46]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+  'cache-control' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'yuhal.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Index->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/index/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'allart',
+  4 => 'p',
+  5 => 'page',
+  6 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.101011s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.068127s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.067441s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.068050s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.067616s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.069770s ]
+[ sql ] [ SQL ] SELECT `a`.`article_id`,`a`.`tag_ids`,`a`.`article_title`,`a`.`create_time`,`a`.`note`,`b`.`value`,`b`.`color` FROM `yh_b_article` `a` INNER JOIN `yh_b_article_type` `b` ON `b`.`id`=`a`.`type_id` WHERE  `a`.`delete_time` IS NULL  AND (  article_title like '%%' ) ORDER BY a.create_time desc LIMIT 0,5 [ RunTime:0.067708s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067625s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067930s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067947s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067696s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067726s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  article_title like '%%' ) LIMIT 1 [ RunTime:0.068810s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T06:20:59+08:00 ] 60.205.47.19 141.8.132.7 GET /robots.txt
+[ log ] www.yuhal.com/robots.txt [运行时间：0.182691s][吞吐率：5.47req/s] [内存消耗：2,119.76kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'connection' => 'Keep-Alive',
+  'from' => 'support@search.yandex.ru',
+  'host' => 'www.yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T06:21:04+08:00 ] 60.205.47.19 141.8.132.7 GET /details/1
+[ log ] www.yuhal.com/details/1 [运行时间：1.034749s][吞吐率：0.97req/s] [内存消耗：3,405.45kb] [文件加载：49]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'details',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'Keep-Alive',
+  'from' => 'support@search.yandex.ru',
+  'host' => 'www.yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Details->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Details.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/details/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'content',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.098741s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.066537s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.065912s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.066604s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.066072s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.066609s ]
+[ sql ] [ SQL ] SELECT `a`.`article_title`,`a`.`create_time`,`a`.`note`,`b`.`color`,`b`.`show_type`,`b`.`value`,`a`.`article_id`,`a`.`tag_ids` FROM `yh_b_article` `a` INNER JOIN `yh_b_article_type` `b` ON `b`.`id`=`a`.`type_id` WHERE  `a`.`delete_time` IS NULL  AND (  article_id=1 ) LIMIT 1 [ RunTime:0.066138s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_des` [ RunTime:0.066612s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_des` WHERE  (  pid=1 ) [ RunTime:0.066297s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL  AND `id` = 2 LIMIT 1 [ RunTime:0.066060s ]
+[ sql ] [ SQL ] SELECT `article_id` FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  article_id < 1 ) ORDER BY create_time desc LIMIT 1 [ RunTime:0.066032s ]
+[ sql ] [ SQL ] SELECT `article_id` FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  article_id > 1 ) ORDER BY article_id asc LIMIT 1 [ RunTime:0.066101s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T08:01:09+08:00 ] 60.205.47.19 180.97.79.14 HEAD /
+[ log ] www.yuhal.com/ [运行时间：1.174367s][吞吐率：0.85req/s] [内存消耗：3,335.02kb] [文件加载：46]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'host' => 'www.yuhal.com',
+  'user-agent' => 'python-requests/2.18.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Index->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/index/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'allart',
+  4 => 'p',
+  5 => 'page',
+  6 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.101882s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.068855s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.068082s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.068493s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.068157s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.068864s ]
+[ sql ] [ SQL ] SELECT `a`.`article_id`,`a`.`tag_ids`,`a`.`article_title`,`a`.`create_time`,`a`.`note`,`b`.`value`,`b`.`color` FROM `yh_b_article` `a` INNER JOIN `yh_b_article_type` `b` ON `b`.`id`=`a`.`type_id` WHERE  `a`.`delete_time` IS NULL  AND (  article_title like '%%' ) ORDER BY a.create_time desc LIMIT 0,5 [ RunTime:0.068458s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.068448s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.068369s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.068344s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.068335s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.068537s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  article_title like '%%' ) LIMIT 1 [ RunTime:0.068209s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T09:28:35+08:00 ] 60.205.47.19 182.118.20.155 GET /
+[ log ] www.yuhal.com/ [运行时间：1.121188s][吞吐率：0.89req/s] [内存消耗：3,336.41kb] [文件加载：46]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'identity',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cache-control' => 'max-age=259200',
+  'connection' => 'keep-alive',
+  'host' => 'www.yuhal.com',
+  'referer' => 'http://www.yuhal.com/',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; Tablet PC 2.0)',
+  'x-forwarded-for' => 'unknown',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Index->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/index/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'allart',
+  4 => 'p',
+  5 => 'page',
+  6 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.099571s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.066947s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.066469s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.066890s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.066612s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.067700s ]
+[ sql ] [ SQL ] SELECT `a`.`article_id`,`a`.`tag_ids`,`a`.`article_title`,`a`.`create_time`,`a`.`note`,`b`.`value`,`b`.`color` FROM `yh_b_article` `a` INNER JOIN `yh_b_article_type` `b` ON `b`.`id`=`a`.`type_id` WHERE  `a`.`delete_time` IS NULL  AND (  article_title like '%%' ) ORDER BY a.create_time desc LIMIT 0,5 [ RunTime:0.066761s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066878s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066776s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066727s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066702s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066894s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  article_title like '%%' ) LIMIT 1 [ RunTime:0.066606s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T09:30:35+08:00 ] 60.205.47.19 141.8.132.7 GET /robots.txt
+[ log ] www.yuhal.com/robots.txt [运行时间：0.163304s][吞吐率：6.12req/s] [内存消耗：2,119.76kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'connection' => 'Keep-Alive',
+  'from' => 'support@search.yandex.ru',
+  'host' => 'www.yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T09:30:38+08:00 ] 60.205.47.19 141.8.132.7 GET /public/static/assets/i/app-icon72x72@2x.png
+[ log ] www.yuhal.com/public/static/assets/i/app-icon72x72@2x.png [运行时间：0.185203s][吞吐率：5.40req/s] [内存消耗：2,121.48kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'Keep-Alive',
+  'from' => 'support@search.yandex.ru',
+  'host' => 'www.yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+)
+[ info ] [ PARAM ] array (
+  'public' => 'static',
+  'assets' => 'i',
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T09:42:53+08:00 ] 60.205.47.19 141.8.132.7 GET /details/9
+[ log ] www.yuhal.com/details/9 [运行时间：1.059156s][吞吐率：0.94req/s] [内存消耗：3,405.63kb] [文件加载：49]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'details',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'Keep-Alive',
+  'from' => 'support@search.yandex.ru',
+  'host' => 'www.yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+)
+[ info ] [ PARAM ] array (
+  'id' => '9',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Details->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Details.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/details/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'content',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.099683s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.067201s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.066653s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.067283s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.066764s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.067312s ]
+[ sql ] [ SQL ] SELECT `a`.`article_title`,`a`.`create_time`,`a`.`note`,`b`.`color`,`b`.`show_type`,`b`.`value`,`a`.`article_id`,`a`.`tag_ids` FROM `yh_b_article` `a` INNER JOIN `yh_b_article_type` `b` ON `b`.`id`=`a`.`type_id` WHERE  `a`.`delete_time` IS NULL  AND (  article_id=9 ) LIMIT 1 [ RunTime:0.066833s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_des` [ RunTime:0.067415s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_des` WHERE  (  pid=9 ) [ RunTime:0.066814s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL  AND `id` = 3 LIMIT 1 [ RunTime:0.066910s ]
+[ sql ] [ SQL ] SELECT `article_id` FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  article_id < 9 ) ORDER BY create_time desc LIMIT 1 [ RunTime:0.066961s ]
+[ sql ] [ SQL ] SELECT `article_id` FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  article_id > 9 ) ORDER BY article_id asc LIMIT 1 [ RunTime:0.067273s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T10:15:36+08:00 ] 60.205.47.19 207.241.232.48 GET /robots.txt
+[ log ] yuhal.com/robots.txt [运行时间：0.185782s][吞吐率：5.38req/s] [内存消耗：2,119.48kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'Close',
+  'host' => 'yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; archive.org_bot +http://www.archive.org/details/archive.org_bot)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T10:15:41+08:00 ] 60.205.47.19 207.241.232.48 GET /
+[ log ] yuhal.com/ [运行时间：1.146734s][吞吐率：0.87req/s] [内存消耗：3,334.86kb] [文件加载：46]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'connection' => 'Close',
+  'host' => 'yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; archive.org_bot +http://www.archive.org/details/archive.org_bot)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Index->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/index/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'allart',
+  4 => 'p',
+  5 => 'page',
+  6 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.107869s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.067069s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.066459s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.067117s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.066861s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.067162s ]
+[ sql ] [ SQL ] SELECT `a`.`article_id`,`a`.`tag_ids`,`a`.`article_title`,`a`.`create_time`,`a`.`note`,`b`.`value`,`b`.`color` FROM `yh_b_article` `a` INNER JOIN `yh_b_article_type` `b` ON `b`.`id`=`a`.`type_id` WHERE  `a`.`delete_time` IS NULL  AND (  article_title like '%%' ) ORDER BY a.create_time desc LIMIT 0,5 [ RunTime:0.066746s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066753s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066562s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066720s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.076488s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066708s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  article_title like '%%' ) LIMIT 1 [ RunTime:0.066521s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T10:59:22+08:00 ] 60.205.47.19 47.93.110.177 GET /robots.txt
+[ log ] yuhal.com/robots.txt [运行时间：0.200718s][吞吐率：4.98req/s] [内存消耗：2,120.04kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+  'cache-control' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'yuhal.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T14:11:42+08:00 ] 60.205.47.19 141.8.132.7 GET /robots.txt
+[ log ] www.yuhal.com/robots.txt [运行时间：0.185046s][吞吐率：5.40req/s] [内存消耗：2,119.76kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'connection' => 'Keep-Alive',
+  'from' => 'support@search.yandex.ru',
+  'host' => 'www.yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T14:11:47+08:00 ] 60.205.47.19 141.8.132.7 GET /details/8
+[ log ] www.yuhal.com/details/8 [运行时间：0.969248s][吞吐率：1.03req/s] [内存消耗：3,405.52kb] [文件加载：49]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'details',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'Keep-Alive',
+  'from' => 'support@search.yandex.ru',
+  'host' => 'www.yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+)
+[ info ] [ PARAM ] array (
+  'id' => '8',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Details->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Details.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/details/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'content',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089250s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.060162s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.059634s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.060112s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.059667s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.060157s ]
+[ sql ] [ SQL ] SELECT `a`.`article_title`,`a`.`create_time`,`a`.`note`,`b`.`color`,`b`.`show_type`,`b`.`value`,`a`.`article_id`,`a`.`tag_ids` FROM `yh_b_article` `a` INNER JOIN `yh_b_article_type` `b` ON `b`.`id`=`a`.`type_id` WHERE  `a`.`delete_time` IS NULL  AND (  article_id=8 ) LIMIT 1 [ RunTime:0.059797s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_des` [ RunTime:0.060139s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_des` WHERE  (  pid=8 ) [ RunTime:0.059559s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL  AND `id` = 5 LIMIT 1 [ RunTime:0.059817s ]
+[ sql ] [ SQL ] SELECT `article_id` FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  article_id < 8 ) ORDER BY create_time desc LIMIT 1 [ RunTime:0.059729s ]
+[ sql ] [ SQL ] SELECT `article_id` FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  article_id > 8 ) ORDER BY article_id asc LIMIT 1 [ RunTime:0.059710s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T14:45:30+08:00 ] 60.205.47.19 94.23.33.67 GET /wp-content/plugins/cherry-plugin/admin/css/cherry-admin-plugin.css
+[ log ] yuhal.com/wp-content/plugins/cherry-plugin/admin/css/cherry-admin-plugin.css [运行时间：0.182470s][吞吐率：5.48req/s] [内存消耗：2,122.08kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'yuhal.com',
+  'keep-alive' => '15',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+  'content' => 'plugins',
+  'plugin' => 'admin',
+  'css' => 'cherry-admin-plugin.css',
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T15:46:08+08:00 ] 60.205.47.19 191.96.249.195 GET //admin
+[ log ] yuhal.com//admin [运行时间：0.204885s][吞吐率：4.88req/s] [内存消耗：2,119.84kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'Keep-Alive, TE',
+  'host' => 'yuhal.com',
+  'keep-alive' => '300',
+  'te' => 'deflate,gzip;q=0.3',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.63 Safari/537.31',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T15:46:12+08:00 ] 60.205.47.19 191.96.249.195 GET /
+[ log ] yuhal.com/ [运行时间：1.126481s][吞吐率：0.89req/s] [内存消耗：3,334.62kb] [文件加载：46]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'TE',
+  'host' => 'yuhal.com',
+  'te' => 'deflate,gzip;q=0.3',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.63 Safari/537.31',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Index->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/index/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'allart',
+  4 => 'p',
+  5 => 'page',
+  6 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.099519s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.067195s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.066559s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.066995s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.066523s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.067006s ]
+[ sql ] [ SQL ] SELECT `a`.`article_id`,`a`.`tag_ids`,`a`.`article_title`,`a`.`create_time`,`a`.`note`,`b`.`value`,`b`.`color` FROM `yh_b_article` `a` INNER JOIN `yh_b_article_type` `b` ON `b`.`id`=`a`.`type_id` WHERE  `a`.`delete_time` IS NULL  AND (  article_title like '%%' ) ORDER BY a.create_time desc LIMIT 0,5 [ RunTime:0.066756s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066707s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066716s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066689s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066797s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066672s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  article_title like '%%' ) LIMIT 1 [ RunTime:0.066530s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T16:54:22+08:00 ] 60.205.47.19 106.11.242.151 GET /
+[ log ] yuhal.com/ [运行时间：1.126360s][吞吐率：0.89req/s] [内存消耗：3,335.40kb] [文件加载：46]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+  'accept-encoding' => 'gzip',
+  'cache-control' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'yuhal.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (iPad; CPU OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Index->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/index/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'allart',
+  4 => 'p',
+  5 => 'page',
+  6 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.100186s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.067712s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.066885s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.067446s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.066897s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.067299s ]
+[ sql ] [ SQL ] SELECT `a`.`article_id`,`a`.`tag_ids`,`a`.`article_title`,`a`.`create_time`,`a`.`note`,`b`.`value`,`b`.`color` FROM `yh_b_article` `a` INNER JOIN `yh_b_article_type` `b` ON `b`.`id`=`a`.`type_id` WHERE  `a`.`delete_time` IS NULL  AND (  article_title like '%%' ) ORDER BY a.create_time desc LIMIT 0,5 [ RunTime:0.067003s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067150s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067075s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067261s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067171s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067071s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  article_title like '%%' ) LIMIT 1 [ RunTime:0.067083s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T17:53:16+08:00 ] 60.205.47.19 118.31.157.25 GET /details/47
+[ log ] www.yuhal.com/details/47 [运行时间：0.610891s][吞吐率：1.64req/s] [内存消耗：3,312.02kb] [文件加载：46]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'details',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+  'cache-control' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'www.yuhal.com',
+  'pragma' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '47',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Details->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Details.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'code',
+  4 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.078171s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.052872s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.052201s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.052646s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.052327s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.052839s ]
+[ sql ] [ SQL ] SELECT `a`.`article_title`,`a`.`create_time`,`a`.`note`,`b`.`color`,`b`.`show_type`,`b`.`value`,`a`.`article_id`,`a`.`tag_ids` FROM `yh_b_article` `a` INNER JOIN `yh_b_article_type` `b` ON `b`.`id`=`a`.`type_id` WHERE  `a`.`delete_time` IS NULL  AND (  article_id=47 ) LIMIT 1 [ RunTime:0.052413s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T19:22:12+08:00 ] 60.205.47.19 176.31.104.175 GET /wp-content/plugins/cherry-plugin/admin/css/cherry-admin-plugin.css
+[ log ] www.yuhal.com/wp-content/plugins/cherry-plugin/admin/css/cherry-admin-plugin.css [运行时间：0.190642s][吞吐率：5.25req/s] [内存消耗：2,122.11kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'www.yuhal.com',
+  'keep-alive' => '15',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+)
+[ info ] [ PARAM ] array (
+  'content' => 'plugins',
+  'plugin' => 'admin',
+  'css' => 'cherry-admin-plugin.css',
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T20:28:13+08:00 ] 60.205.47.19 46.4.87.205 GET /robots.txt
+[ log ] yuhal.com/robots.txt [运行时间：0.164647s][吞吐率：6.07req/s] [内存消耗：2,119.09kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+  'host' => 'yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T20:28:16+08:00 ] 60.205.47.19 46.4.87.205 GET /categories/%E5%B7%A5%E5%85%B7
+[ log ] yuhal.com/categories/%E5%B7%A5%E5%85%B7 [运行时间：1.035295s][吞吐率：0.97req/s] [内存消耗：3,373.48kb] [文件加载：48]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,text/plain,text/xml,text/*,application/xml,application/xhtml+xml,application/rss+xml,application/atom+xml,application/rdf+xml,application/php,application/x-php,application/x-httpd-php',
+  'accept-language' => 'en',
+  'host' => 'yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)',
+)
+[ info ] [ PARAM ] array (
+  'cate' => '工具',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Category->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Category.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/category/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'list',
+  4 => 'allart',
+  5 => 'cate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.100482s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.067758s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.067135s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.067749s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.067175s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article_type` [ RunTime:0.067623s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_article_type` WHERE  `yh_b_article_type`.`delete_time` IS NULL  AND `value` = '工具' LIMIT 1 [ RunTime:0.067506s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.067756s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  type_id = 7 ) [ RunTime:0.067181s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067354s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067324s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067348s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T20:28:20+08:00 ] 60.205.47.19 46.4.87.205 GET /categories/%E6%8A%80%E6%9C%AF%E4%B9%8B%E5%A4%96
+[ log ] yuhal.com/categories/%E6%8A%80%E6%9C%AF%E4%B9%8B%E5%A4%96 [运行时间：0.914530s][吞吐率：1.09req/s] [内存消耗：3,368.36kb] [文件加载：48]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,text/plain,text/xml,text/*,application/xml,application/xhtml+xml,application/rss+xml,application/atom+xml,application/rdf+xml,application/php,application/x-php,application/x-httpd-php',
+  'accept-language' => 'en',
+  'host' => 'yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)',
+)
+[ info ] [ PARAM ] array (
+  'cate' => '技术之外',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Category->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Category.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/category/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'list',
+  4 => 'allart',
+  5 => 'cate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.100473s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.067664s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.067109s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.067823s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.067319s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article_type` [ RunTime:0.067751s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_article_type` WHERE  `yh_b_article_type`.`delete_time` IS NULL  AND `value` = '技术之外' LIMIT 1 [ RunTime:0.067169s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.067508s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  type_id = 6 ) [ RunTime:0.068351s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067393s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T20:28:23+08:00 ] 60.205.47.19 46.4.87.205 GET /categories/%E6%95%B0%E6%8D%AE%E5%BA%93
+[ log ] yuhal.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93 [运行时间：0.911613s][吞吐率：1.10req/s] [内存消耗：3,371.10kb] [文件加载：48]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,text/plain,text/xml,text/*,application/xml,application/xhtml+xml,application/rss+xml,application/atom+xml,application/rdf+xml,application/php,application/x-php,application/x-httpd-php',
+  'accept-language' => 'en',
+  'host' => 'yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)',
+)
+[ info ] [ PARAM ] array (
+  'cate' => '数据库',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Category->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Category.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/category/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'list',
+  4 => 'allart',
+  5 => 'cate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089832s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.060781s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.060024s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.060522s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.060078s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article_type` [ RunTime:0.060791s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_article_type` WHERE  `yh_b_article_type`.`delete_time` IS NULL  AND `value` = '数据库' LIMIT 1 [ RunTime:0.060169s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.065928s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  type_id = 5 ) [ RunTime:0.060077s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.062613s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.062497s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T20:28:27+08:00 ] 60.205.47.19 46.4.87.205 GET /tag/%E6%8A%80%E6%9C%AF%E4%B9%8B%E5%A4%96
+[ log ] yuhal.com/tag/%E6%8A%80%E6%9C%AF%E4%B9%8B%E5%A4%96 [运行时间：1.404839s][吞吐率：0.71req/s] [内存消耗：3,314.33kb] [文件加载：46]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'tag',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,text/plain,text/xml,text/*,application/xml,application/xhtml+xml,application/rss+xml,application/atom+xml,application/rdf+xml,application/php,application/x-php,application/x-httpd-php',
+  'accept-language' => 'en',
+  'host' => 'yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)',
+)
+[ info ] [ PARAM ] array (
+  'tag' => '技术之外',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Tag->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Tag.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/tag/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'allart',
+  4 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.099267s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.066981s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.066476s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.069255s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.066447s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL  AND `value` = '技术之外' LIMIT 1 [ RunTime:0.066625s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.067065s ]
+[ sql ] [ SQL ] SELECT `a`.`article_id`,`a`.`tag_ids`,`a`.`article_title`,`a`.`create_time`,`a`.`note`,`b`.`value`,`b`.`color` FROM `yh_b_article` `a` INNER JOIN `yh_b_article_type` `b` ON `b`.`id`=`a`.`type_id` WHERE  `a`.`delete_time` IS NULL ORDER BY a.create_time desc [ RunTime:0.066800s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066648s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066781s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066629s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066629s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.070067s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066619s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066619s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066508s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.066591s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T20:28:30+08:00 ] 60.205.47.19 46.4.87.205 GET /tag/%E9%80%92%E5%BD%92
+[ log ] yuhal.com/tag/%E9%80%92%E5%BD%92 [运行时间：1.253538s][吞吐率：0.80req/s] [内存消耗：3,314.82kb] [文件加载：46]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'tag',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,text/plain,text/xml,text/*,application/xml,application/xhtml+xml,application/rss+xml,application/atom+xml,application/rdf+xml,application/php,application/x-php,application/x-httpd-php',
+  'accept-language' => 'en',
+  'host' => 'yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)',
+)
+[ info ] [ PARAM ] array (
+  'tag' => '递归',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Tag->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Tag.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/tag/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'allart',
+  4 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089644s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.060433s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.059959s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.060419s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.059871s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL  AND `value` = '递归' LIMIT 1 [ RunTime:0.059919s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.061301s ]
+[ sql ] [ SQL ] SELECT `a`.`article_id`,`a`.`tag_ids`,`a`.`article_title`,`a`.`create_time`,`a`.`note`,`b`.`value`,`b`.`color` FROM `yh_b_article` `a` INNER JOIN `yh_b_article_type` `b` ON `b`.`id`=`a`.`type_id` WHERE  `a`.`delete_time` IS NULL ORDER BY a.create_time desc [ RunTime:0.059979s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.060000s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.059978s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.060043s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.060054s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.060121s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.060040s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.060052s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.060144s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.060219s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T20:28:33+08:00 ] 60.205.47.19 46.4.87.205 GET /tag/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93
+[ log ] yuhal.com/tag/%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93 [运行时间：1.240577s][吞吐率：0.81req/s] [内存消耗：3,316.74kb] [文件加载：46]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'tag',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,text/plain,text/xml,text/*,application/xml,application/xhtml+xml,application/rss+xml,application/atom+xml,application/rdf+xml,application/php,application/x-php,application/x-httpd-php',
+  'accept-language' => 'en',
+  'host' => 'yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)',
+)
+[ info ] [ PARAM ] array (
+  'tag' => '非关系型数据库',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Tag->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Tag.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/tag/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'allart',
+  4 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088500s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.059721s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.059074s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.059627s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.059200s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL  AND `value` = '非关系型数据库' LIMIT 1 [ RunTime:0.059266s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.059677s ]
+[ sql ] [ SQL ] SELECT `a`.`article_id`,`a`.`tag_ids`,`a`.`article_title`,`a`.`create_time`,`a`.`note`,`b`.`value`,`b`.`color` FROM `yh_b_article` `a` INNER JOIN `yh_b_article_type` `b` ON `b`.`id`=`a`.`type_id` WHERE  `a`.`delete_time` IS NULL ORDER BY a.create_time desc [ RunTime:0.059337s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.059353s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.059446s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.059479s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.059351s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.059363s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.059344s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.059346s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.059312s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.059403s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T20:36:54+08:00 ] 60.205.47.19 66.249.69.45 GET /robots.txt
+[ log ] yuhal.com/robots.txt [运行时间：0.207760s][吞吐率：4.81req/s] [内存消耗：2,119.80kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/plain,text/html,*/*',
+  'accept-encoding' => 'gzip,deflate,br',
+  'connection' => 'keep-alive',
+  'host' => 'yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T20:36:55+08:00 ] 60.205.47.19 66.249.69.45 GET /
+[ log ] yuhal.com/ [运行时间：1.016246s][吞吐率：0.98req/s] [内存消耗：3,335.62kb] [文件加载：46]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip,deflate,br',
+  'connection' => 'keep-alive',
+  'from' => 'googlebot(at)googlebot.com',
+  'host' => 'yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Index->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Index.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/index/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'allart',
+  4 => 'p',
+  5 => 'page',
+  6 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089464s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.060314s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.059774s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.060206s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.059915s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.060262s ]
+[ sql ] [ SQL ] SELECT `a`.`article_id`,`a`.`tag_ids`,`a`.`article_title`,`a`.`create_time`,`a`.`note`,`b`.`value`,`b`.`color` FROM `yh_b_article` `a` INNER JOIN `yh_b_article_type` `b` ON `b`.`id`=`a`.`type_id` WHERE  `a`.`delete_time` IS NULL  AND (  article_title like '%%' ) ORDER BY a.create_time desc LIMIT 0,5 [ RunTime:0.059932s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.060056s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.060046s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.060111s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.060107s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.060026s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  article_title like '%%' ) LIMIT 1 [ RunTime:0.059963s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T20:37:06+08:00 ] 60.205.47.19 66.249.69.41 GET /informationinfo
+[ log ] yuhal.com/informationinfo [运行时间：0.384980s][吞吐率：2.60req/s] [内存消耗：3,114.44kb] [文件加载：46]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'information',
+    2 => 'informationinfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*,application/json, text/javascript, */*; q=0.01',
+  'accept-encoding' => 'gzip,deflate,br',
+  'accept-language' => 'en-US',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=31tu1tfmbkdfe6iu3th02029e2',
+  'from' => 'googlebot(at)googlebot.com',
+  'host' => 'yuhal.com',
+  'referer' => 'http://yuhal.com/',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'x-requested-with' => 'XMLHttpRequest',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Information->informationinfo[ /data/home/bxu2713790162/htdocs/application/blog/controller/Information.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.093508s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.060304s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.059636s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.060207s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.064164s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T20:45:43+08:00 ] 60.205.47.19 189.164.247.129 GET /wp-login.php
+[ log ] yuhal.com/wp-login.php [运行时间：0.181456s][吞吐率：5.51req/s] [内存消耗：2,118.55kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'host' => 'yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T20:50:29+08:00 ] 60.205.47.19 66.249.69.43 GET /tag/Git
+[ log ] yuhal.com/tag/Git [运行时间：1.254232s][吞吐率：0.80req/s] [内存消耗：3,314.76kb] [文件加载：46]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'tag',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip,deflate,br',
+  'connection' => 'keep-alive',
+  'from' => 'googlebot(at)googlebot.com',
+  'host' => 'yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+  'tag' => 'Git',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Tag->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Tag.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/tag/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'allart',
+  4 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089141s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.060240s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.059676s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.060404s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.059843s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL  AND `value` = 'Git' LIMIT 1 [ RunTime:0.059795s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.060193s ]
+[ sql ] [ SQL ] SELECT `a`.`article_id`,`a`.`tag_ids`,`a`.`article_title`,`a`.`create_time`,`a`.`note`,`b`.`value`,`b`.`color` FROM `yh_b_article` `a` INNER JOIN `yh_b_article_type` `b` ON `b`.`id`=`a`.`type_id` WHERE  `a`.`delete_time` IS NULL ORDER BY a.create_time desc [ RunTime:0.059820s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.059694s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.059891s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.059844s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.059982s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.059821s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.059707s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.059774s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.059819s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.059894s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T20:51:52+08:00 ] 60.205.47.19 66.249.69.45 GET /details/2
+[ log ] yuhal.com/details/2 [运行时间：0.987212s][吞吐率：1.01req/s] [内存消耗：3,405.51kb] [文件加载：49]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'details',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip,deflate,br',
+  'connection' => 'keep-alive',
+  'from' => 'googlebot(at)googlebot.com',
+  'host' => 'yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Details->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Details.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/details/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'content',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089600s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.060599s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.059905s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.060697s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.060343s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.060583s ]
+[ sql ] [ SQL ] SELECT `a`.`article_title`,`a`.`create_time`,`a`.`note`,`b`.`color`,`b`.`show_type`,`b`.`value`,`a`.`article_id`,`a`.`tag_ids` FROM `yh_b_article` `a` INNER JOIN `yh_b_article_type` `b` ON `b`.`id`=`a`.`type_id` WHERE  `a`.`delete_time` IS NULL  AND (  article_id=2 ) LIMIT 1 [ RunTime:0.060198s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_des` [ RunTime:0.060663s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_des` WHERE  (  pid=2 ) [ RunTime:0.059939s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL  AND `id` = 12 LIMIT 1 [ RunTime:0.060255s ]
+[ sql ] [ SQL ] SELECT `article_id` FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  article_id < 2 ) ORDER BY create_time desc LIMIT 1 [ RunTime:0.060172s ]
+[ sql ] [ SQL ] SELECT `article_id` FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  article_id > 2 ) ORDER BY article_id asc LIMIT 1 [ RunTime:0.059956s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T21:29:36+08:00 ] 60.205.47.19 66.249.69.43 GET /nisnbekoftzth.html
+[ log ] yuhal.com/nisnbekoftzth.html [运行时间：0.182914s][吞吐率：5.47req/s] [内存消耗：2,120.25kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip,deflate,br',
+  'connection' => 'keep-alive',
+  'from' => 'googlebot(at)googlebot.com',
+  'host' => 'yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T21:34:12+08:00 ] 60.205.47.19 115.193.169.213 HEAD //js/close.gif
+[ log ] yuhal.com//js/close.gif [运行时间：0.183947s][吞吐率：5.44req/s] [内存消耗：2,119.29kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'Keep-Alive',
+  'host' => 'yuhal.com',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'close.gif',
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T21:34:12+08:00 ] 60.205.47.19 115.193.169.213 HEAD //js/%20close.gif
+[ log ] yuhal.com//js/%20close.gif [运行时间：0.187901s][吞吐率：5.32req/s] [内存消耗：2,118.92kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'yuhal.com',
+)
+[ info ] [ PARAM ] array (
+  'js' => ' close.gif',
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T21:51:07+08:00 ] 60.205.47.19 115.193.169.213 HEAD //plus/img/wbg.gif
+[ log ] yuhal.com//plus/img/wbg.gif [运行时间：0.214678s][吞吐率：4.66req/s] [内存消耗：2,119.43kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'Keep-Alive',
+  'host' => 'yuhal.com',
+)
+[ info ] [ PARAM ] array (
+  'plus' => 'img',
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T21:51:07+08:00 ] 60.205.47.19 115.193.169.213 HEAD //plus/img/%20wbg.gif
+[ log ] yuhal.com//plus/img/%20wbg.gif [运行时间：0.204339s][吞吐率：4.89req/s] [内存消耗：2,118.84kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'yuhal.com',
+)
+[ info ] [ PARAM ] array (
+  'plus' => 'img',
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T22:42:54+08:00 ] 60.205.47.19 141.8.132.7 GET /robots.txt
+[ log ] www.yuhal.com/robots.txt [运行时间：0.184440s][吞吐率：5.42req/s] [内存消耗：2,119.76kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'connection' => 'Keep-Alive',
+  'from' => 'support@search.yandex.ru',
+  'host' => 'www.yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T22:42:59+08:00 ] 60.205.47.19 141.8.132.7 GET /tag/PhpExcel
+[ log ] www.yuhal.com/tag/PhpExcel [运行时间：1.377245s][吞吐率：0.73req/s] [内存消耗：3,314.96kb] [文件加载：46]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'tag',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'Keep-Alive',
+  'from' => 'support@search.yandex.ru',
+  'host' => 'www.yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+)
+[ info ] [ PARAM ] array (
+  'tag' => 'PhpExcel',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Tag->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Tag.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/tag/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'allart',
+  4 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.100102s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.067565s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.066883s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.067332s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.066972s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL  AND `value` = 'PhpExcel' LIMIT 1 [ RunTime:0.067027s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.067411s ]
+[ sql ] [ SQL ] SELECT `a`.`article_id`,`a`.`tag_ids`,`a`.`article_title`,`a`.`create_time`,`a`.`note`,`b`.`value`,`b`.`color` FROM `yh_b_article` `a` INNER JOIN `yh_b_article_type` `b` ON `b`.`id`=`a`.`type_id` WHERE  `a`.`delete_time` IS NULL ORDER BY a.create_time desc [ RunTime:0.067080s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067170s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067081s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067152s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067149s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067116s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067129s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067114s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067174s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.067145s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T23:11:47+08:00 ] 60.205.47.19 187.64.79.236 GET /wp-login.php
+[ log ] yuhal.com/wp-login.php [运行时间：0.198992s][吞吐率：5.03req/s] [内存消耗：2,118.55kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'host' => 'yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T23:33:43+08:00 ] 60.205.47.19 37.9.113.61 GET /robots.txt
+[ log ] www.yuhal.com/robots.txt [运行时间：0.183389s][吞吐率：5.45req/s] [内存消耗：2,119.76kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'connection' => 'Keep-Alive',
+  'from' => 'support@search.yandex.ru',
+  'host' => 'www.yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T23:33:47+08:00 ] 60.205.47.19 213.180.203.19 GET /favicon.ico
+[ log ] www.yuhal.com/favicon.ico [运行时间：0.203155s][吞吐率：4.92req/s] [内存消耗：2,120.12kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'Keep-Alive',
+  'from' => 'support@search.yandex.ru',
+  'host' => 'www.yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-03-07T23:39:19+08:00 ] 60.205.47.19 141.8.132.7 GET /categories/%E5%B7%A5%E5%85%B7
+[ log ] www.yuhal.com/categories/%E5%B7%A5%E5%85%B7 [运行时间：1.151811s][吞吐率：0.87req/s] [内存消耗：3,373.56kb] [文件加载：48]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip,deflate',
+  'connection' => 'Keep-Alive',
+  'from' => 'support@search.yandex.ru',
+  'host' => 'www.yuhal.com',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+)
+[ info ] [ PARAM ] array (
+  'cate' => '工具',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\blog\controller\Category->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Category.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/category/index.html [ array (
+  0 => 'Tag',
+  1 => 'Information',
+  2 => 'User',
+  3 => 'list',
+  4 => 'allart',
+  5 => 'cate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.101612s ] mysql:dbname=yuhal;host=118.31.23.98;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_tags` [ RunTime:0.070304s ]
+[ sql ] [ SQL ] SELECT `value` FROM `yh_b_tags` WHERE  `yh_b_tags`.`delete_time` IS NULL ORDER BY update_time desc [ RunTime:0.067909s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_information` [ RunTime:0.068445s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_information` ORDER BY rand() LIMIT 5 [ RunTime:0.068148s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article_type` [ RunTime:0.068401s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_article_type` WHERE  `yh_b_article_type`.`delete_time` IS NULL  AND `value` = '工具' LIMIT 1 [ RunTime:0.067975s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yh_b_article` [ RunTime:0.068514s ]
+[ sql ] [ SQL ] SELECT * FROM `yh_b_article` WHERE  `yh_b_article`.`delete_time` IS NULL  AND (  type_id = 7 ) [ RunTime:0.068056s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.068091s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.068360s ]
+[ sql ] [ SQL ] select a.path from yh_s_picture as a left join yh_s_group as b on a.group_id=b.id where b.value='博客' order by rand() limit 1 [ RunTime:0.068257s ]
+
+---------------------------------------------------------------
+[ 2018-03-07T23:58:25+08:00 ] 60.205.47.19 123.57.254.142 POST /xmlrpc.php
+[ log ] YUHAL.COM/xmlrpc.php [运行时间：0.182937s][吞吐率：5.47req/s] [内存消耗：2,122.82kb] [文件加载：35]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /data/home/bxu2713790162/htdocs/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'blog',
+    1 => 'error',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '217',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'en-US,en;q=0.8',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'cookie' => 'wordpress_test_cookie=WP+Cookie+check',
+  'host' => 'YUHAL.COM',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; fr; rv:1.9.2.8) Gecko/20100722 Firefox/3.6.8',
+)
+[ info ] [ PARAM ] array (
+  '<?xml_version' => '"1.0"?><methodCall><methodName>wp.getUsersBlogs</methodName><params><param><value><string>admin</string></value></param><param><value><string>narecumsafie55</string></value></param></params></methodCall>',
+)
+[ info ] [ RUN ] app\blog\controller\Error->index[ /data/home/bxu2713790162/htdocs/application/blog/controller/Error.php ]
+[ info ] [ VIEW ] /data/home/bxu2713790162/htdocs/application/blog/view/error/error.html [ array (
+  0 => 'code',
+  1 => 'msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

@@ -1,0 +1,42 @@
+{extend name="base"/}
+{block name="title"}分类：<{$list.value}> | {__block__}{/block}
+{block name="main"}
+<!-- content srart -->
+<div class="am-g am-g-fixed blog-fixed">
+    <div class="am-u-md-8 am-u-sm-12">
+        <article class="am-g blog-entry-article">
+            <div class="am-u-lg-12 am-u-md-12 am-u-sm-12 blog-entry-text blog-text-center">
+                <span class="am-icon-folder" title="分类"> &nbsp;</span>
+                <span><a style="cursor: pointer;color: <{$list.color}>" class="blog"><{$list.value}> &nbsp;</a></span>
+                <span><i title="更新时间" class="am-icon-calendar am-icon-fw"></i><{$list.update_time}></span>
+                <p><{$list.intro}>
+                </p>
+                <p><a href="" class="blog-continue">continue reading</a></p>
+            </div>
+        </article>
+        {volist name="allart" id="v"}
+        <article class="am-g blog-entry-article">
+            <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img" style="width:400px;height:155px;overflow: hidden;">
+                <a target="_blank" href="/details/<{$v.article_id}>"><img src="<{$v.pic}>" alt="" class="am-u-sm-12"></a>
+            </div>
+            <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
+                <span>
+                    <a style="cursor: pointer;color: <{$list.color}>" class="blog"><{$list.value}> &nbsp;</a>
+                </span>
+                <span><i class="am-icon-at am-icon-fw"></i>__NICK_NAME__ &nbsp;</span>
+                <span><{$v.create_time}></span>
+                <h1><a target="_blank" href="/details/<{$v.article_id}>"><{$v.article_title}></a></h1>
+                {if mb_strlen($v.note,'utf8')>=100}
+                <p><{$v.note|mb_substr=0,100,'utf8'}>...</p>
+                {else/}
+                <p><{$v.note}></p>
+                {/if}
+            </div>
+        </article>
+        {/volist}
+</div>
+{/block}
+
+
+
+

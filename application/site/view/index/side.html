@@ -1,0 +1,123 @@
+    <div class="am-u-md-4 am-u-sm-12 blog-sidebar">
+        <div id="first_sidebar" class="blog-sidebar-widget blog-bor">
+            <h2 class="blog-text-center blog-title"><span>微信公众号</span></h2>
+            <img src="http://www.3lian.com/js/grey.gif"  class="blog-entry-img" >
+            <p>购买广告位</p>
+        </div>
+        <div id="second_sidebar" class="blog-sidebar-widget blog-bor">
+            <h2 class="blog-text-center blog-title"><span>联系我</span></h2>
+            <p id="contact">
+            </p>
+        </div>
+        <div class="blog-clear-margin blog-sidebar-widget blog-bor am-g ">
+            <h2 class="blog-title"><span>标签云</span></h2>
+            <div class="am-u-sm-12 blog-clear-padding">
+                {volist name="$Tag" id="v"}
+                <a href='/tag/<{$v.value}>' class='blog-tag'><{$v.value}></a>
+                {/volist}
+            </div>
+        </div>
+        <div class="blog-sidebar-widget blog-bor">
+            <h2 class="blog-title"><span>最新资讯</span></h2>
+            <a title='千呼万唤' href='javascript:change();' id="load" data-am-loading="{spinner: 'circle-o-notch', loadingText: '千呼万唤', resetText: ''}"><i class='am-icon-refresh am-icon-fw'></i>千呼万唤</a>
+            <ul id="information" class="am-list">
+                <li><a>正在加载...</a></li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+<script>
+    var test = window.location.href;
+    var host = 'http://'+window.location.host;  
+    var url = test.split('#')[0];
+    switch(url)
+    {
+    case host+'/timeline':
+      $("#topbar li:eq(1)").addClass("am-active");
+      $("#topbar li:eq(0)").removeClass("am-active");
+      break;
+    case host+'/about':
+      $("#topbar li:eq(2)").addClass("am-active");
+      $("#topbar li:eq(0)").removeClass("am-active");
+      $("#first_sidebar p").hide();    
+      about();
+      index();
+      break; 
+    default:
+      $("#topbar li:eq(0)").addClass("am-active");
+      $("#first_sidebar h2 span").text("赞助商");
+      $("#second_sidebar").hide();
+      sponsor();
+      index();  
+    }       
+    $('#load').click(function (){
+        var $btn = $(this);
+        $btn.button('loading');
+        setTimeout(function(){
+            $btn.button('reset');
+        }, 500);
+    });
+    function change(){
+        $.ajax({
+            type: "GET",
+            url: '/ajax_information',
+            dataType: "json",
+            success: function (informationinfo) {
+                var html = "";
+                $.each(informationinfo, function(informationinfo, info){
+                    html+="<li><a href='"+info.url+"' target='_blank'>"+info.article_title.substring(0,18)+"...</title></a></li>";
+                });
+                $("#information").html(html);
+            }
+        });
+    }
+    function index(){
+        //加载最新资讯
+        $.ajax({
+            type: "GET",
+            url: "/ajax_information",
+            dataType: "json",
+            success: function(informationinfo){
+                var html = "";
+                $.each(informationinfo, function(informationinfo, info){
+                    html+="<li><a href='"+info.url+"' target='_blank'>"+info.article_title.substring(0,17)+"...</title></a></li>";
+                });
+                $("#information").html(html);
+            }
+        });
+    }
+    function about(){
+        //加载个人信息
+        $.ajax({
+            type: "GET",
+            url: "/userinfo",
+            dataType: "json",
+            success: function(userinfo){
+                var data = JSON.parse(userinfo.contact);   
+                $("#first_sidebar img").attr('src','__STATIC__/images/qrcode_HaI.jpg');
+                $("#avatar").attr('src',userinfo.avatar);
+                $("#nickname").text(userinfo.nick_name);
+                $(".introduce").text(userinfo.introduce);
+                var html = '';
+                $.each(data, function(data, info){
+                    html+="<a target='_blank' title='"+info.name+"' href='"+info.value+"'><span class='am-icon-"+info.name+" am-icon-fw am-primary blog-icon'></span></a> ";
+                });
+                $("#contact").html(html);
+            }
+        });
+    }
+    function sponsor(){
+        //加载广告信息
+        $.ajax({
+            type: "GET",
+            url: "/sponsorinfo",
+            dataType: "json",
+            success: function(info){
+                $("#first_sidebar img").attr('src','__STATIC__/images/qrcode_HaI.jpg');
+            }
+        });
+    }
+</script>
+<!-- content end -->
+

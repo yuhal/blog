@@ -1,0 +1,37 @@
+{extend name="base" /}
+{block name="title"}
+{if empty($title)}{__block__}{else/}<{$title}> | {__block__}{/if}
+{/block}
+{block name="main"}
+<div class="am-g am-g-fixed blog-fixed blog-content">
+    <div class="am-u-md-8 am-u-sm-12">        
+          <article class="am-article blog-article-p">
+            <div class="am-article-hd">
+              <h1 class="am-article-title blog-text-center">关于博主</h1>
+              <p class="am-article-meta blog-text-center">
+                <span>
+                <a style="color: <{$content.color}>;" href="/categories/<{$content.value}>" class="blog>"><{$content.value}> &nbsp;</a>
+                </span>-
+                <span><a href=""><i class="am-icon-at am-icon-fw"></i>__NICK_NAME__ &nbsp;</a></span>-
+                <span><a href=""><{$content.create_time}></a></span>
+              </p>
+            </div>
+            <div class="am-g blog-author blog-article-margin">
+              <div class="am-u-sm-3 am-u-md-3 am-u-lg-2">
+                <img id="avatar" src="http://wx.qlogo.cn/mmhead/k947icPboBqAwmQZ8UAGfJbI3GVnZ6O3aoEpAibbuFScEyEc6vGY0JIA/0" class="blog-author-img am-circle">
+              </div>
+              <div class="am-u-sm-9 am-u-md-9 am-u-lg-10">
+                <p class="introduce"><{$content.note}></p>
+              </div>  
+            </div>        
+            <div class="am-article-bd">  
+            {volist name="content['des']" id="v"}    
+            <p id="<{$v['name']}>" class="class="am-article-lead"">
+            <{$v['name']}></p>
+            <blockquote><p><{$v.text|htmlspecialchars_decode}></p></blockquote>
+            {/volist}
+            </div>
+          </article>        
+        <hr>
+    </div>   
+{/block}    

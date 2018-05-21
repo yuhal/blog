@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+   <!--  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>{block name="title"}<{$site_info.nick_name}>的博客{/block}</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="icon" type="image/png" href="__STATIC__/assets/i/digg_32px_581505_easyicon.net.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="__STATIC__/assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="__STATIC__/assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileImage" content="__STATIC__/assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <link rel="stylesheet" href="__STATIC__/assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="__STATIC__/assets/css/app.css">
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <script src="__STATIC__/assets/js/jquery.min.js"></script>
+    <!--<![endif]-->
+    {if is_mobile_request()==false}
+    <style>
+    #detail {
+        margin:0 35px 0 45px;
+    }
+    #amul li a{
+        width:100px;
+    }
+    #amul li:first-child{
+        font-size:16px;
+        width:105px;
+    }
+    #amul li:last-child{
+        font-size:12px;
+        width:100px;
+    }
+    .amulli{
+        font-size:12px;
+        width:100px;
+    }
+    </style> 
+    {/if}
+</head>
+<!--顶部-->
+{block name="nav"}{include file="index/nav"/}{/block}
+<!--顶部-->
+<!--主内容-->
+{block name="main"}{/block}
+<!--主内容-->
+<!--侧边栏-->
+{block name="right"}{include file="index/side"/}{/block}
+<!--侧边栏-->
+<!--底部-->
+{block name="footer"}
+<footer class="blog-footer">
+    <div class="blog-text-center">
+        Blog Produced by yuhal. Designed by yuhal. © 2017 All Right Reserve.
+ </div>
+</footer>
+<script>
+    function redirect(obj) {
+        window.location.href=obj.href;
+    }
+</script>
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="__STATIC__/assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="__STATIC__/pages/js/jquery.pagination.js"></script>
+<script src="__STATIC__/assets/js/amazeui.min.js"></script>
+<script src="__STATIC__/assets/js/amazeui.min.js"></script>
+<script src="__STATIC__/assets/js/pinto.min.js"></script>
+<script src="__STATIC__/assets/js/img.js"></script>
+<script src="__STATIC__/assets/js/layer/layer.js"></script>
+</body>
+</html>
+{/block}
+<!--底部-->

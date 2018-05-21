@@ -1,0 +1,34 @@
+<!-- banner start -->
+<div class="am-g am-g-fixed blog-fixed am-u-sm-centered blog-article-margin">
+    <div data-am-widget="slider" class="am-slider am-slider-b1" data-am-slider='{&quot;controlNav&quot;:false}' >
+    <ul class="am-slides" >
+    	{volist name="allart" id="v" length="5"}
+      <li style="width:1160; height:501px;" style="overflow: hidden;">
+            <img src="<{$v.pic}>">
+            <div class="blog-slider-desc am-slider-desc ">
+                <div class="blog-text-center blog-slider-con">
+                    <span>
+						<a href="" class="blog-green"><{$v.value}> &nbsp;</a>
+                    </span>               
+                    <h1 class="blog-h-margin"><a target="_blank" href="__APP__/details/<{$v.article_id}>">
+                    {if mb_strlen($v.article_title)>=33}
+                    	<{$v.article_title|mb_substr=0,33}>...
+                    {else/}
+                    	<p><{$v.article_title}></p>
+                    {/if}
+                    </h1>
+                    {if mb_strlen($v.note)>=181}
+                    <p><{$v.note|mb_substr=0,181}>...</p>
+                    {else/}
+                    <p><{$v.note}></p>
+                    {/if}
+                    <span><{$v.ctime}></span>
+                    <br><br><br><br><br><br><br>                
+                </div>
+            </div>
+      </li>
+      {/volist}
+    </ul>
+    </div>
+</div>
+<!-- banner end -->

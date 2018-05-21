@@ -1,0 +1,71 @@
+{extend name="base"/}
+{block name="title"}<{$content.article_title}> | {__block__}{/block}
+{block name="main"}
+<script type="text/javascript">
+window.onload=function(){
+  $(".am-article-bd a").attr("target","_blank");
+} 
+</script>
+<!-- content srart -->
+<div class="am-g am-g-fixed blog-fixed blog-content">
+  {if is_mobile_request()==false}
+	<div style="position:fixed;width:130px;top:90px;left:0px;overflow: hidden;">
+	 <ul id="amul" class="am-pagination blog-article-margin">
+	 	 <li><a style="cursor: pointer"><span class="am-icon-list"> &nbsp;</span>目录</a></li>
+         {volist name="content['des']" id="v" key="k" }
+         <li class="amulli"><a href="#<{$v.name}>"><{$k}>&nbsp;<{$v.name}></a></li>
+         {/volist}
+     </ul>
+	</div> 
+  {/if}
+    <div id="detail" class="am-u-sm-12">
+      <article class="am-article blog-article-p">
+        <div class="am-article-hd">
+          <h1 style="font-size:32px;" class="am-article-title blog-text-center"><{$content.article_title}></h1>
+          <p class="am-article-meta blog-text-center">
+            <span>
+			      <a style="color: <{$content.color}>;" href="/categories/<{$content.value}>" class="blog>"><{$content.value}> &nbsp;</a>
+            </span>-
+            <span><a href=""><i class="am-icon-at am-icon-fw"></i>__NICK_NAME__ &nbsp;</a></span>-
+            <span><a href=""><{$content.create_time}></a></span>
+          </p>
+        </div>        
+        <div class="am-article-bd">
+        <p class="class="am-article-lead"">
+            {volist name="content['des']" id="v"}
+            <h1 id="<{$v.name}>"><{$v.name}></h1><hr/><{$v.text|htmlspecialchars_decode}>
+            {/volist}
+        </p>
+        </div>
+      </article>
+        <div class="am-g blog-article-widget blog-article-margin">
+          <div id="share" class="am-u-lg-4 am-u-md-5 am-u-sm-7 am-u-sm-centered blog-text-center">
+              <{$content['tags']}>
+            <hr>
+            <span title="share to" class="am-icon-share am-icon-fw am-primary"></span>&nbsp;&nbsp;&nbsp;
+            <a title="Sina" target="_blank" href="http://service.weibo.com/share/share.php?title=<{$content.article_title}>"><span class="am-icon-weibo am-icon-fw blog-icon"></span></a>
+            <a title="Facebook" href="javascript:window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(document.location.href)+'&amp;t='+encodeURIComponent(document.title),'toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=600, height=450,top=100,left=350');void(0)">
+                <span class="am-icon-facebook am-icon-fw am-primary blog-icon"></span>
+            </a>
+            <script type="text/javascript">document.write(['<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=',encodeURIComponent(location.href),'&title=',encodeURIComponent(document.title),'" target="_blank"   title="Qzone"><span class="am-icon-star am-icon-fw am-primary blog-icon"></span></a>'].join(''));</script>
+            <a title="Wechat" target="_blank" href=""><span class="am-icon-wechat am-icon-fw blog-icon"></span></a>
+
+          </div>
+        </div>
+        <hr>
+        <ul class="am-pagination blog-article-margin">
+        {if $content.lastid && !$content.nextid}
+        	<li class="am-pagination-prev"><a href="/details/<{$content.lastid}>">&laquo; 一切的回顾</a></li>
+        {elseif $content.nextid && !$content.lastid}  
+        	<li class="am-pagination-next"><a href="/details/<{$content.nextid}>">不远的未来 &raquo;</a></li>
+
+        </ul> 	{else}
+        <li class="am-pagination-prev"><a href="/details/<{$content.lastid}>">&laquo; 一切的回顾</a></li>
+        <li class="am-pagination-next"><a href="/details/<{$content.nextid}>">不远的未来 &raquo;</a></li>
+        {/if}
+        <hr>
+    </div>
+</div>
+<!-- content end -->
+{/block}
+{block name="right"}{/block}

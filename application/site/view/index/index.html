@@ -1,0 +1,141 @@
+{extend name="base" /}
+{block name="title"}
+{if empty($title)}{__block__}{else/}<{$title}> | {__block__}{/if}
+{/block}
+{block name="main"}
+<style>
+    am-pagination li:first-child{
+        padding:50px;
+    }  
+    #Pagination a{
+        margin-left:5px;
+        float: left;
+    }
+    .am-pagination{
+        float: left;
+    }
+</style>
+<script>
+    function showlist(obj,page){
+        var title = $("#title").val();
+        var url = "/Index/index";
+        var data = {p:obj,title:title};
+        $.ajax({
+            type: "GET",
+            url: url,
+            data: data,
+            dataType: "json",
+            success: function(data){
+                var html = '';
+                $.each(data, function(data, info){
+                    html += '<article class="am-g blog-entry-article">' +
+                        '<div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img" style="width:400px;height:155px;overflow: hidden;">'+
+                        '<a target="_blank" href="/details/'+info.article_id+'"><img src="'+info.pic+'" alt="" class="am-u-sm-12"></a>'+
+                        '</div>'+
+                        '<div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">'+
+                        '<span>'+
+                        '<a style="color:'+info.color+'" href="/categories/'+info.value+'" class="blog">'+info.value+' &nbsp;</a>'+
+                        '</span>'+
+                        '<span> @<{$site_info.nick_name}> &nbsp; </span>'+
+                        '<span>'+info.create_time+'</span>'+
+                        '<h1><a target="_blank" href="/details/'+info.article_id+'">'+info.article_title+'</a></h1>';
+                    if(info.note.length>=100){
+                        html +='<p>'+info.note.substring(0,100)+'</p>';
+                    }else{
+                        html +='<p>'+info.note+'</p>';
+                    }
+                    html +='<p><a href="" class="blog-continue">continue reading</a></p>'+
+                        '</div>'+
+                        '</article>';
+                });
+                $('#list').html(html);
+                if(obj==1){
+                    $('.prev').attr('href','javascript:showlist(1,"'+page+'")');
+                }else{
+                    var prev = parseInt(obj)-1;
+                    $('.prev').attr('href','javascript:showlist("'+prev+'","'+page+'")');
+                }
+                if(obj==page){
+                    $('.next').attr('href','javascript:showlist("'+page+'","'+page+'")');
+                }else{
+                    var next = parseInt(obj)+1;
+                    $('.next').attr('href','javascript:showlist("'+next+'","'+page+'")');
+                }
+            }
+        });
+        var progress = $.AMUI.progress;
+        progress.done(true);
+    }
+</script>
+<!-- content srart -->
+<div class="am-g am-g-fixed blog-fixed">
+    <div class="am-u-md-8 am-u-sm-12">
+        {if $title}  
+        <script>
+        $(function(){
+            toRed("<{$title}>");
+        });       
+        function toRed(content){
+            var bodyHtml = $(".tle").html();
+            var x = bodyHtml.replace(new RegExp(content,"gm"),"<font color='red'>"+content+"</font>");
+            $(".tle").html(x);
+            var bodyHtml = $(".alc").html();
+            var x = bodyHtml.replace(new RegExp(content,"gm"),"<font color='red'>"+content+"</font>");
+            $(".alc").html(x);
+        }
+        </script>           
+        <h7 class="am-article-title blog-text-center"><{$title}>&nbsp;的搜索结果</h7>
+        {/if}
+        <div id="list">
+            {volist name="allart" id="v"}
+            <article class="am-g blog-entry-article">
+                <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img" style="width:400px;height:155px;overflow: hidden;">
+                    <a target="_blank" href="/details/<{$v.article_id}>"><img src="<{$v.pic}>" alt="" class="am-u-sm-12"></a>
+                </div>
+                <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
+                <span>
+                	<a style="color:<{$v.color}>" href="/categories/<{$v.value}>" class="blog"><{$v.value}> &nbsp;</a>
+                </span>
+                    <span> @<{$site_info.nick_name}> &nbsp;</span>
+                    <span><{$v.create_time}></span>
+                    <h1><a class="tle" target="_blank" href="/details/<{$v.article_id}>"><{$v.article_title}></a></h1>
+                    {if mb_strlen($v.note,'utf8')>=100}
+                    <p class="alc"><{$v.note|mb_substr=0,100,'utf8'}>...</p>
+                    {else/}
+                    <p class="alc"><{$v.note}></p>
+                    {/if}
+                </div>
+            </article>
+            {/volist}
+        </div>
+        {if is_mobile_request()==false || $allart==null}
+        <ul class="am-pagination" style="margin-right: 105px">
+            <li class="am-pagination-prev">
+                {if $p==1}
+                <a class="prev" href="javascript:showlist(1,<{$page}>);">&laquo; Prev</a>
+                {else/}
+                <a class="prev" href="javascript:showlist(<{$p-1}>,<{$page}>);">&laquo; Prev</a>
+                {/if}
+            </li>
+        </ul>
+        {/if}
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#Pagination").pagination(<{$page}>);
+            });
+        </script>
+        <ul class="am-pagination" id="Pagination" >
+        </ul>
+        {if is_mobile_request()==false || $allart==null}
+        <ul class="am-pagination" style="float: right">
+            <li class="am-pagination-next">
+                {if $p==$page}
+                <a class="next" href="javascript:showlist(<{$page}>,<{$page}>);">&raquo; Next</a>
+                {else/}
+                <a class="next" href="javascript:showlist(<{$p+1}>,<{$page}>);">Next &raquo;</a>
+                {/if}
+            </li>
+        </ul>
+        {/if}
+    </div>
+{/block}

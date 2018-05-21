@@ -1,0 +1,41 @@
+{extend name="base"/}
+{block name="title"}<{$code}> &middot; <{$msg}>{/block}
+{block name="nav"}{/block}
+{block name="main"}
+<div class="log">
+    <div class="am-g">
+        <div class="am-u-lg-3 am-u-md-6 am-u-sm-8 am-u-sm-centered log-content">
+            <h1 class="log-title am-animation-slide-top"><{$code}></h1>
+            <p><{$msg}></p>
+            <p>The site configured at this address does not contain the requested file.</p>
+            <p>The Page You Requested Could Not Be Found,make sure that the filename case matches the URL.</p>
+            <p>Please go back to the homepage or contact us on the following platforms.</p>
+            <p id="contact"></p>
+            <p><a href="http://www.yuhal.com"><i class="am-icon-link am-icon-fw"></i>http://www.yuhal.com</a></p>
+        </div>
+    </div>
+    <footer class="log-footer">
+        © 2017 Inc , All rights reserved.
+    </footer>
+</div>
+<script>
+    window.onload=function() {
+        /*加载联系方式*/
+        $.ajax({
+            type: "GET",
+            url: "/userinfo",
+            dataType: "json",
+            success: function (userinfo) {
+                var data = JSON.parse(userinfo.contact);
+                var html = '';
+                $.each(data, function (data, info) {
+                    html += "<a target='_blank' title='" + info.name + "' href='" + info.value + "'><span class='am-icon-" + info.name + " am-icon-fw am-primary blog-icon'></span></a> ";
+                });
+                $("#contact").html(html);
+            }
+        });
+    };
+</script>
+{/block}
+{block name="right"}{/block}
+{block name="footer"}{/block}

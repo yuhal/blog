@@ -1,0 +1,97 @@
+    <div class="am-u-md-4 am-u-sm-12 blog-sidebar">
+        <div class="blog-sidebar-widget blog-bor">
+            <h2 class="blog-text-center blog-title"><span>About ME</span></h2>
+            <img id="avatar" src="http://www.3lian.com/js/grey.gif" alt="" class="blog-entry-img" >
+            <p id="nick_name"></p>
+            <p id="sign"></p>
+            <p id="introduce"></p>
+        </div>
+        <div class="blog-sidebar-widget blog-bor">
+            <h2 class="blog-text-center blog-title"><span>Contact ME</span></h2>
+            <p id="contact">
+            </p>
+        </div>
+        <div class="blog-clear-margin blog-sidebar-widget blog-bor am-g ">
+            <h2 class="blog-title"><span>TAG cloud</span></h2>
+            <div id="tag" class="am-u-sm-12 blog-clear-padding">
+            </div>
+        </div>
+        <div class="blog-sidebar-widget blog-bor">
+            <h2 class="blog-title"><span>最新资讯</span></h2>
+            <a title='缓一缓' href='javascript:change();' id="load" data-am-loading="{spinner: 'circle-o-notch', loadingText: '缓一缓', resetText: ''}"><i class='am-icon-refresh am-icon-fw'></i>缓一缓</a>
+            <ul id="information" class="am-list">
+               <li><a>正在加载...</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    $('#load').click(function (){
+        var $btn = $(this);
+        $btn.button('loading');
+        setTimeout(function(){
+            $btn.button('reset');
+        }, 500);
+    });
+    function change(){
+        $.ajax({
+            type: "GET",
+            url: '/informationinfo',
+            dataType: "json",
+            success: function (informationinfo) {
+                var html = "";
+                $.each(informationinfo, function(informationinfo, info){
+                    html+="<li><a href='"+info.url+"' target='_blank'>"+info.article_title.substring(0,18)+"...</title></a></li>";
+                });
+                $("#information").html(html);
+            }
+        });
+    }
+    window.onload=function(){
+        /*加载个人信息*/
+        $.ajax({
+            type: "GET",
+            url: "/userinfo",
+            dataType: "json",
+            success: function(userinfo){
+                var data = JSON.parse(userinfo.contact);
+                $("#avatar").attr('src',userinfo.avatar);
+                $("#nick_name").text(userinfo.nick_name);
+                $("#sign").text(userinfo.sign);
+                $("#introduce").text(userinfo.introduce);
+                var html = '';
+                $.each(data, function(data, info){
+                    html+="<a target='_blank' title='"+info.name+"' href='"+info.value+"'><span class='am-icon-"+info.name+" am-icon-fw am-primary blog-icon'></span></a> ";
+                });
+                $("#contact").html(html);
+            }
+        });
+        /*加载标签信息*/
+        $.ajax({
+            type: "GET",
+            url: "/taginfo",
+            dataType: "json",
+            success: function(taginfo){
+                var html = '';
+                $.each(taginfo, function(taginfo, info){
+                    html+="<a href='/tag/"+info.value+"' class='blog-tag'>"+info.value+"</a> ";
+                });
+                $("#tag").html(html);
+            }
+        });
+        /*加载最新资讯*/
+        $.ajax({
+            type: "GET",
+            url: "/informationinfo",
+            dataType: "json",
+            success: function(informationinfo){
+                var html = "";
+                $.each(informationinfo, function(informationinfo, info){
+                    html+="<li><a href='"+info.url+"' target='_blank'>"+info.article_title.substring(0,18)+"...</title></a></li>";
+                });
+                $("#information").html(html);
+            }
+        });
+    }
+</script>
+<!-- content end -->

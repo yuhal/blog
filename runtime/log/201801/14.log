@@ -1,0 +1,494 @@
+[ 2018-01-14T00:05:03+08:00 ] 60.205.47.19 121.196.228.57 HEAD /
+[ log ] www.yuhal.com/ [运行时间：0.014165s][吞吐率：70.60req/s] [内存消耗：879.71kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T00:19:56+08:00 ] 60.205.47.19 13.115.206.123 GET /
+[ log ] yuhal.com/ [运行时间：0.016698s][吞吐率：59.89req/s] [内存消耗：879.94kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T02:18:30+08:00 ] 60.205.47.19 217.69.133.70 GET /robots.txt
+[ log ] www.yuhal.com/robots.txt [运行时间：0.013734s][吞吐率：72.81req/s] [内存消耗：879.74kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T02:18:33+08:00 ] 60.205.47.19 217.69.133.239 GET /offer.html?domain=yuhal.com
+[ log ] www.yuhal.com/offer.html?domain=yuhal.com [运行时间：0.014954s][吞吐率：66.87req/s] [内存消耗：880.03kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T04:07:24+08:00 ] 60.205.47.19 34.211.106.56 GET /wp-login.php
+[ log ] yuhal.com/wp-login.php [运行时间：0.014291s][吞吐率：69.98req/s] [内存消耗：879.72kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T05:12:25+08:00 ] 60.205.47.19 111.206.36.14 GET /
+[ log ] yuhal.com/ [运行时间：0.013455s][吞吐率：74.32req/s] [内存消耗：879.75kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T05:24:33+08:00 ] 60.205.47.19 180.76.15.11 GET /robots.txt
+[ log ] yuhal.com/robots.txt [运行时间：0.015570s][吞吐率：64.23req/s] [内存消耗：879.77kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T05:31:35+08:00 ] 60.205.47.19 220.181.51.110 GET /
+[ log ] www.yuhal.com/ [运行时间：0.014520s][吞吐率：68.87req/s] [内存消耗：879.97kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T05:47:11+08:00 ] 60.205.47.19 120.78.45.96 GET /
+[ log ] yuhal.com/ [运行时间：0.013700s][吞吐率：72.99req/s] [内存消耗：879.87kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T06:01:04+08:00 ] 60.205.47.19 219.234.81.32 GET /
+[ log ] www.yuhal.com/ [运行时间：0.014196s][吞吐率：70.44req/s] [内存消耗：879.72kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T06:01:04+08:00 ] 60.205.47.19 219.234.81.32 GET /
+[ log ] www.yuhal.com/ [运行时间：0.013422s][吞吐率：74.50req/s] [内存消耗：879.71kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T06:01:04+08:00 ] 60.205.47.19 219.234.81.32 GET /
+[ log ] www.yuhal.com/ [运行时间：0.013820s][吞吐率：72.36req/s] [内存消耗：879.71kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T06:01:04+08:00 ] 60.205.47.19 219.234.81.32 GET /
+[ log ] www.yuhal.com/ [运行时间：0.014149s][吞吐率：70.68req/s] [内存消耗：879.71kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T06:01:05+08:00 ] 60.205.47.19 219.234.81.32 GET /
+[ log ] www.yuhal.com/ [运行时间：0.012971s][吞吐率：77.10req/s] [内存消耗：879.71kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T06:01:05+08:00 ] 60.205.47.19 219.234.81.32 GET /
+[ log ] www.yuhal.com/ [运行时间：0.012785s][吞吐率：78.22req/s] [内存消耗：879.71kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T06:01:05+08:00 ] 60.205.47.19 219.234.81.32 GET /
+[ log ] www.yuhal.com/ [运行时间：0.012823s][吞吐率：77.99req/s] [内存消耗：879.71kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T06:01:05+08:00 ] 60.205.47.19 219.234.81.32 GET /
+[ log ] www.yuhal.com/ [运行时间：0.013267s][吞吐率：75.37req/s] [内存消耗：879.71kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T06:01:05+08:00 ] 60.205.47.19 219.234.81.32 GET /
+[ log ] www.yuhal.com/ [运行时间：0.013930s][吞吐率：71.79req/s] [内存消耗：879.71kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T06:01:05+08:00 ] 60.205.47.19 219.234.81.32 GET /
+[ log ] www.yuhal.com/ [运行时间：0.013431s][吞吐率：74.45req/s] [内存消耗：879.71kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T06:01:05+08:00 ] 60.205.47.19 219.234.81.32 GET /
+[ log ] www.yuhal.com/ [运行时间：0.014122s][吞吐率：70.81req/s] [内存消耗：879.71kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T09:10:15+08:00 ] 60.205.47.19 203.208.60.226 GET /robots.txt
+[ log ] www.yuhal.com/robots.txt [运行时间：0.015616s][吞吐率：64.04req/s] [内存消耗：879.78kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T09:24:16+08:00 ] 60.205.47.19 118.31.157.59 GET /
+[ log ] www.yuhal.com/ [运行时间：0.014869s][吞吐率：67.25req/s] [内存消耗：879.89kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T09:56:32+08:00 ] 60.205.47.19 106.11.226.144 GET /
+[ log ] yuhal.com/ [运行时间：0.014704s][吞吐率：68.01req/s] [内存消耗：879.86kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T10:41:33+08:00 ] 60.205.47.19 202.100.78.235 GET /
+[ log ] www.yuhal.com/ [运行时间：0.013824s][吞吐率：72.34req/s] [内存消耗：879.86kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T10:55:20+08:00 ] 60.205.47.19 106.11.242.66 GET /
+[ log ] www.yuhal.com/ [运行时间：0.014805s][吞吐率：67.54req/s] [内存消耗：879.85kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T12:46:21+08:00 ] 60.205.47.19 203.208.60.223 GET /robots.txt
+[ log ] www.yuhal.com/robots.txt [运行时间：0.013753s][吞吐率：72.71req/s] [内存消耗：879.78kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T14:10:54+08:00 ] 60.205.47.19 61.158.148.35 GET /
+[ log ] www.yuhal.com/ [运行时间：0.015381s][吞吐率：65.01req/s] [内存消耗：879.72kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T15:46:11+08:00 ] 60.205.47.19 208.110.93.78 GET /robots.txt
+[ log ] www.yuhal.com/robots.txt [运行时间：0.014362s][吞吐率：69.63req/s] [内存消耗：879.85kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T16:38:54+08:00 ] 60.205.47.19 172.241.151.27 HEAD /
+[ log ] yuhal.com/ [运行时间：0.014829s][吞吐率：67.44req/s] [内存消耗：879.71kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T18:36:50+08:00 ] 60.205.47.19 188.25.112.245 GET /
+[ log ] yuhal.com/ [运行时间：0.014144s][吞吐率：70.70req/s] [内存消耗：879.68kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T18:36:51+08:00 ] 60.205.47.19 188.25.112.245 GET /
+[ log ] yuhal.com/ [运行时间：0.014021s][吞吐率：71.32req/s] [内存消耗：879.60kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T18:36:51+08:00 ] 60.205.47.19 188.25.112.245 GET /
+[ log ] yuhal.com/ [运行时间：0.015978s][吞吐率：62.59req/s] [内存消耗：879.60kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T18:36:52+08:00 ] 60.205.47.19 188.25.112.245 GET /
+[ log ] yuhal.com/ [运行时间：0.015327s][吞吐率：65.24req/s] [内存消耗：879.60kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T18:41:58+08:00 ] 60.205.47.19 123.125.71.40 GET /tag/Git
+[ log ] www.yuhal.com/tag/Git [运行时间：0.015220s][吞吐率：65.70req/s] [内存消耗：879.83kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T18:45:00+08:00 ] 60.205.47.19 5.9.106.230 GET /robots.txt
+[ log ] www.yuhal.com/robots.txt [运行时间：0.014114s][吞吐率：70.85req/s] [内存消耗：879.86kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T19:26:57+08:00 ] 60.205.47.19 86.110.116.119 GET /
+[ log ] yuhal.com/ [运行时间：0.014791s][吞吐率：67.61req/s] [内存消耗：879.80kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T19:26:58+08:00 ] 60.205.47.19 86.110.116.119 GET /
+[ log ] yuhal.com/ [运行时间：0.014290s][吞吐率：69.98req/s] [内存消耗：879.78kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------
+[ 2018-01-14T19:50:28+08:00 ] 60.205.47.19 203.208.60.144 GET /robots.txt
+[ log ] yuhal.com/robots.txt [运行时间：0.014639s][吞吐率：68.31req/s] [内存消耗：879.77kb] [文件加载：21]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [2]Invalid argument supplied for foreach()[/data/home/bxu2713790162/htdocs/application/config.php:16]
+
+---------------------------------------------------------------

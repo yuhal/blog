@@ -1,0 +1,37 @@
+<!-- nav start -->
+<nav class="am-g am-g-fixed blog-fixed blog-nav" id="top">
+<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only blog-button" data-am-collapse="{target: '#blog-collapse'}" ><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+  <div class="am-collapse am-topbar-collapse" id="blog-collapse">
+    <ul id="topbar" class="am-nav am-nav-pills am-topbar-nav">
+      <li class="am-active"> <a style="cursor: pointer;" href="/"><i class="am-icon-home am-icon-fw"></i>首页</a></li>
+      <!--<li><a href="/photo">相册</a></li>-->
+      <li><a href="/timeline"><i class="am-icon-archive am-icon-fw"></i>归档</a></li>
+      <li><a href="/about"><i class="am-icon-angellist am-icon-fw"></i>关于</a></li>
+    </ul>
+    <form action="/index" method="get" class="am-topbar-form am-topbar-right am-form-inline" role="search">
+      <div class="am-form-group">
+        <input type="text" id="title" name="title" class="am-form-field am-input-sm" placeholder="🔍" {if isset($title)} value="<{$title}>" {/if} >
+      </div>
+    </form>
+  </div>
+</nav>
+<hr>
+<script type="text/javascript">
+    var test = window.location.href;
+    var host = 'http://'+window.location.host;  
+    switch(window.location.href)
+    {
+    case host+'/timeline':
+      $("#topbar li:eq(1)").addClass("am-active");
+      $("#topbar li:eq(0)").removeClass("am-active");
+      break;
+    case host+'/about':
+      $("#topbar li:eq(2)").addClass("am-active");
+      $("#topbar li:eq(0)").removeClass("am-active");
+      break; 
+    default:
+      $("#topbar li:eq(0)").addClass("am-active");
+    }       
+</script>
+<!-- nav end -->
