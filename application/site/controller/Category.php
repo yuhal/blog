@@ -11,17 +11,16 @@ namespace app\site\controller;
 class Category extends Base
 {
     /**
-     * @param string $name
-     * @param int $p
-     * @return mixed
+     * 分类首页
+     * @param $cate
      */
     public function index($cate){
         $ArticleType = $this->ArticleType;
         $list = $ArticleType::getbyvalue($cate);
         if(empty($list)){
-            return $this->fetch('error/error',['code'=>404,'msg'=>'File not found']);
+            $this->redirect('/error');
         }
-        $where = "type_id = {$list['id']}";
+        $where['type_id'] = $list['id'];
         $allart = $this->ArticleType->getArticle()->where($where)->select();
         foreach ($allart as $key => $value) {
              $allart[$key]['pic'] = $this->Article->getOnePicturesByGroupName();

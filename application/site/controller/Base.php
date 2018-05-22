@@ -29,7 +29,6 @@ class Base extends Controller
         $this->ArticleType = model('site/ArticleType');
         $this->ArticleTags = model('site/ArticleTags');
         $this->assign('Tag',$this->ArticleTags->getAllTags());
-        $this->assign('Information',getRandInformation());
     }
 
     public function ajax_information(){

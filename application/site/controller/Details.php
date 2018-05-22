@@ -13,15 +13,15 @@ use app\blog\model\Tags;
 class Details extends Base
 {
     /**
+     * 文章详情页
      * @param $id
-     * @return mixed
      */
     public function index($id)
     {
-        $where = "article_id={$id}";
+        $where['article_id'] = $id;
         $content = $this->Article->getArticleByWhere($where);
         if(empty($content)){
-            return $this->fetch('error/error',['code'=>404,'msg'=>'File not found']);
+            $this->redirect('/error');
         }
         $content['des'] = $this->Article->getDes()->where("pid={$id}")->select();
         if($content['show_type']==1){
