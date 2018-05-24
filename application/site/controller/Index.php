@@ -53,5 +53,39 @@ class Index extends Base
         return $this->fetch('index/about');
     }
 
+    /**
+     * 文章详情页
+     * @param $id
+     */
+    public function article($id)
+    { 
+        $where['article_id'] = $id;
+        $content = $this->Article->getArticleByWhere($where);
+        if(empty($content)){
+            $this->redirect('/error');
+        }
+        $content['des'] = $this->Article->getDes()->where("pid={$id}")->select();
+        if($content['show_type']==1){
+            return $this->fetch('index/about',['content'=>$content]);
+        }
+        $arr = ishav_str_array(',',$content['tag_ids']);
+        if(empty($arr)){
+            $str = ''; 
+        }elseif(empty($arr[1])){
+            $str = '<span title="Tags" class="am-icon-tag"> &nbsp;</span>'; 
+        }else{
+            $str = '<span title="Tags" class="am-icon-tags"> &nbsp;</span>'; 
+        }
+        foreach ($arr as $k=>$v){
+            $tag = Tags::getbyid($v)['value'];
+            $str .= "<a href='/tag/".$tag."'>".$tag."</a> ,";
+        }
+        $content['tags']=rtrim($str, ",");
+        $content['lastid'] = $this->Article->getLastidById($id);
+        $content['nextid'] = $this->Article->getNextidById($id);
+        $this->assign('content',$content);
+        return $this->fetch();
+    }
+
 
 }
