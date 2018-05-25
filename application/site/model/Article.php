@@ -93,32 +93,25 @@ class Article extends Model{
 	 * @param $year
 	 */
 	public function getAllArticleByYear(){
-         $data = method_exists(__CLASS__,'redis') ? $this->redis->get('blog_'.$this->user_info['id'].'_timeline') : null;
-         if($data){
-            return $data;
-         }else{
-             $years = $this->getYears();
-             for($year=$years['end'];$year>=$years['start'];$year--){
-                for($i=12;$i>=1;$i--){
-                $x = $year.'-'.$i.'-1';
-                $y = $year.'-'.$i.'-'.cal_days_in_month(CAL_GREGORIAN,$i,$year);
-                $data[$year][$i] = $this->alias('a')
-                    ->join('article_type b','b.id=a.type_id')
-                    ->field('a.article_id,a.article_title,a.create_time,a.note,b.value,b.color')
-                    ->where("a.create_time between '{$x}' and '{$y}'")
-                    ->order('a.create_time desc')
-                    ->select();
-                if(empty($data[$year][$i])){
-                        unset($data[$year][$i]);
-                    }
+         $timeslot = db('article')->field("min(create_time) as min_ctime,max(create_time) as max_ctime")->find();
+         $years['start'] = date("Y",strtotime($timeslot['min_ctime']));
+         $years['end'] = date("Y",strtotime($timeslot['max_ctime']));
+         for($year=$years['end'];$year>=$years['start'];$year--){
+            for($i=12;$i>=1;$i--){
+            $x = $year.'-'.$i.'-1';
+            $y = $year.'-'.$i.'-'.date("t",strtotime("{$year}-{$i}"));
+            $data[$year][$i] = db('article')->alias('a')
+                ->join('article_type b','b.id=a.type_id')
+                ->field('a.article_id,a.article_title,a.create_time,a.note,b.value,b.color')
+                ->where("a.create_time between '{$x}' and '{$y}'")
+                ->order('a.create_time desc')
+                ->select();
+            if(empty($data[$year][$i])){
+                    unset($data[$year][$i]);
                 }
-             }
-            if(method_exists(__CLASS__,'redis')){
-                $this->redis->set('blog_'.$this->user_info['id'].'_timeline',$data,$this->expire_time);
-            } 
-            return $data;
-         }   
-        
+            }
+         }
+        return $data;
 	}
 
 	/**

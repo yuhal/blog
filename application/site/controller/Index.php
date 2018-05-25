@@ -87,5 +87,15 @@ class Index extends Base
         return $this->fetch();
     }
 
+    /**
+     * 文章归档页
+     * @param $id
+     */
+    public function timeline()
+    {
+        $file = $this->Article->getAllArticleByYear();
+        $this->assign('file',$file);
+        return $this->fetch();
+    }
 
 }

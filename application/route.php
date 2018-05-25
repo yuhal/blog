@@ -25,7 +25,7 @@ return [
     /*********关于*********/
         'about'              => 'site/index/about',
     /*********归档*********/
-        'timeline'	         =>	'site/timeline/index',
+        'timeline'	         =>	'site/index/timeline',
     /*********pub*********/
         //获取标签信息
         'ajax_tag'           => 'site/index/ajax_tag',
