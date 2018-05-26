@@ -3,9 +3,9 @@ namespace app\site\model;
 use think\Model;
 
 class ArticleDes extends Model{
-	
-	//添加文章详情
+
 	/**
+	 * 添加文章详情
 	 * @param array $des
 	 */
 	public static function adddes($des){
@@ -15,4 +15,5 @@ class ArticleDes extends Model{
 		}			
 		return $res;
 	} 
+	
 }

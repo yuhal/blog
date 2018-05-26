@@ -43,6 +43,24 @@ class Base extends Controller
         }
     }
 
+    public function ajax_siteinfo(){
+        if(request()->isAjax()){
+           return $this->checkdomain();
+        }
+    }   
+
+    public function ajax_sponsorinfo(){
+        if(request()->isAjax()){
+           return 520;
+        }
+    }  
+
+    public function error_page($msg=404){
+        return view('public/error',['msg'=>'Sorry, the page you visited did not exist!','code'=>404]);
+    }
+
+
+
 
 
 

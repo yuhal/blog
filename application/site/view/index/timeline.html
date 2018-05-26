@@ -17,7 +17,7 @@
                     <li>
                         <span class="am-u-sm-4 am-u-md-2 timeline-span"><{$v3.create_time}></span>
                         <span class="am-u-sm-8 am-u-md-6">
-                            <a href="/details/<{$v3.article_id}>">
+                            <a href="/article/<{$v3.article_id}>">
                             {if strlen($v3.article_title)>=108}
                                 <{$v3.article_title|mb_substr=0,30,'utf8'}>...
                             {else/}
@@ -28,16 +28,15 @@
                         <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">
                             <a style="color:<{$v3.color}>" target="_blank" href="/categories/<{$v3.value}>" class="blog"><{$v3.value}> &nbsp;</a>
                         </span>
-                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">__NICK_NAME__</span>
+                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only"><{$site_info.nick_name}></span>
                     </li>
                     {/volist}
                 </ul>
-                <br>
             {/volist}
         </div>
         {/volist}
         <hr>
-    </div>
+    </div> 
 </div>
 <!-- content end -->
 {/block}

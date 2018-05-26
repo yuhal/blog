@@ -4,7 +4,6 @@ use think\Request;
 
 class Index extends Base
 {
-    public $pageSize;
 
     /**
      * Index constructor.
@@ -43,7 +42,7 @@ class Index extends Base
 	}
 
     public function about($id=7){
-        $where = "article_id={$id}";
+        $where['article_id'] = $id;
         $content = $this->Article->getArticleByWhere($where);
         if(empty($content)){
             $this->redirect('/error');
@@ -64,7 +63,7 @@ class Index extends Base
         if(empty($content)){
             $this->redirect('/error');
         }
-        $content['des'] = $this->Article->getDes()->where("pid={$id}")->select();
+        $content['des'] = $this->Article->getDes()->where('article_id',$id)->select();
         if($content['show_type']==1){
             return $this->fetch('index/about',['content'=>$content]);
         }
@@ -77,7 +76,7 @@ class Index extends Base
             $str = '<span title="Tags" class="am-icon-tags"> &nbsp;</span>'; 
         }
         foreach ($arr as $k=>$v){
-            $tag = Tags::getbyid($v)['value'];
+            $tag = $this->ArticleTags::getbyid($v)['value'];
             $str .= "<a href='/tag/".$tag."'>".$tag."</a> ,";
         }
         $content['tags']=rtrim($str, ",");

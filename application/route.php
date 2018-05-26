@@ -26,15 +26,18 @@ return [
         'about'              => 'site/index/about',
     /*********归档*********/
         'timeline'	         =>	'site/index/timeline',
+    /*********ajax*********/
+        //标签信息
+        'ajax_tag'           => 'site/base/ajax_tag',
+        //最新咨询信息
+        'ajax_information'   => 'site/base/ajax_information',
+        //站点信息
+        'ajax_siteinfo'      => 'site/base/ajax_siteinfo',
+        //广告信息
+        'ajax_sponsorinfo'   => 'site/base/ajax_sponsorinfo',
     /*********pub*********/
-        //获取标签信息
-        'ajax_tag'           => 'site/index/ajax_tag',
-        //获取最新咨询信息
-        'ajax_information'   => 'site/index/ajax_information',
-        //获取用户信息
-        'userinfo'           => 'site/index/userinfo',
         //空路由
-        '__MISS__'           => 'site/page/pageerror', 
+        '__MISS__'           => 'site/base/error_page', 
         //error页面
-        'error/[:msg]'       => 'site/page/pageerror',
+        'error/[:msg]'       => 'site/base/error_page',
 ];

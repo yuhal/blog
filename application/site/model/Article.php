@@ -1,14 +1,14 @@
 <?php
 namespace app\site\model;
 use think\Model;
-use think\Db;
-use think\Session;
 use traits\model\SoftDelete;
-use think\cache\driver\Redis;//加载Redis
 
 class Article extends Model{
 
     use softdelete;
+
+    // 设置当前模型对应的完整数据表名称
+    protected $table = 'yh_article';
 
     protected $type = [
         'create_time'  =>  'datetime:Y/m/d',
@@ -24,8 +24,10 @@ class Article extends Model{
      */
     public function getDes()
     {
-        return $this->hasMany('ArticleDes', 'pid');
+        //var_dump('<pre>',$this);exit;
+        return $this->hasMany('ArticleDes');
     }
+
     /**
      * 根据搜索条件获取所有的文章的数量
      * @param $where
@@ -33,6 +35,7 @@ class Article extends Model{
 	public function getAllArticleCountByWhere($where){
         return db('article')->where($where)->count();
 	}
+
 	/**
 	 * 查询上一篇id
 	 * @param $id
@@ -40,6 +43,7 @@ class Article extends Model{
 	public function getLastidById($id){
         return $this->field('article_id')->where("article_id < {$id}")->order('create_time desc')->value('article_id');
 	} 
+
 	/**
 	 * 查询下一篇id
 	 * @param $id
@@ -48,6 +52,7 @@ class Article extends Model{
         return $this->field('article_id')->where("article_id > {$id}")->order('article_id asc')->value('article_id');
 
 	}
+
 	/**
 	 * 查询所有的文章
 	 * @param $p
@@ -56,7 +61,7 @@ class Article extends Model{
 	 */
 	public function getAllArticleByWhere($p,$where,$pageSize){
         $start = ($p-1)*$pageSize;
-        $data = db('article')->alias('a')
+        $data = $this->alias('a')
         ->join('article_type b','b.id=a.type_id')
         ->field('a.article_id,a.tag_ids,a.article_title,a.create_time,a.note,b.value,b.color')
         ->where($where)
@@ -68,24 +73,30 @@ class Article extends Model{
         }
         return $data; 
 	}
+
     /**
      * @param $tag_id
      * @return \data|\strings
      */
 	public function getAllArticleByTag($tag_id){
-        $data = db('article')->alias('a')
+        $data = $this->alias('a')
             ->join('article_type b','b.id=a.type_id')
             ->field('a.article_id,a.tag_ids,a.article_title,a.create_time,a.note,b.value,b.color')
             ->order('a.create_time desc')
             ->select();
-        foreach ($data as $k=>$v){
-            $data[$k]['pic'] = getOnePicturesByGroupName();
-            $arr = ishav_str_array(',',$v['tag_ids']);
-            if(!in_array($tag_id,$arr)){
-                unset($data[$k]);
+        if($data){
+            foreach ($data as $k=>$v){
+                $data[$k]['pic'] = getOnePicturesByGroupName();
+                $arr = ishav_str_array(',',$v['tag_ids']);
+                if(!in_array($tag_id,$arr)){
+                    unset($data[$k]);
+                }
             }
+            return $data;    
+        }else{
+            return false;
         }
-        return $data;
+        
     }
 
 	/**
@@ -93,25 +104,29 @@ class Article extends Model{
 	 * @param $year
 	 */
 	public function getAllArticleByYear(){
-         $timeslot = db('article')->field("min(create_time) as min_ctime,max(create_time) as max_ctime")->find();
-         $years['start'] = date("Y",strtotime($timeslot['min_ctime']));
-         $years['end'] = date("Y",strtotime($timeslot['max_ctime']));
-         for($year=$years['end'];$year>=$years['start'];$year--){
-            for($i=12;$i>=1;$i--){
-            $x = $year.'-'.$i.'-1';
-            $y = $year.'-'.$i.'-'.date("t",strtotime("{$year}-{$i}"));
-            $data[$year][$i] = db('article')->alias('a')
-                ->join('article_type b','b.id=a.type_id')
-                ->field('a.article_id,a.article_title,a.create_time,a.note,b.value,b.color')
-                ->where("a.create_time between '{$x}' and '{$y}'")
-                ->order('a.create_time desc')
-                ->select();
-            if(empty($data[$year][$i])){
-                    unset($data[$year][$i]);
+        $timeslot = $this->field("min(create_time) as min_ctime,max(create_time) as max_ctime")->find();
+        if($timeslot){
+            $years['start'] = date("Y",strtotime($timeslot['min_ctime']));
+            $years['end'] = date("Y",strtotime($timeslot['max_ctime']));
+            for($year=$years['end'];$year>=$years['start'];$year--){
+                for($i=12;$i>=1;$i--){
+                $x = $year.'-'.$i.'-1';
+                $y = $year.'-'.$i.'-'.date("t",strtotime("{$year}-{$i}"));
+                $data[$year][$i] = $this->alias('a')
+                    ->join('article_type b','b.id=a.type_id')
+                    ->field('a.article_id,a.article_title,from_unixtime(unix_timestamp(a.create_time),"%Y/%m/%d") as create_time,a.note,b.value,b.color')
+                    ->where("a.create_time between '{$x}' and '{$y}'")
+                    ->order('a.create_time desc')
+                    ->select();
+                if(empty($data[$year][$i])){
+                        unset($data[$year][$i]);
+                    }
                 }
             }
-         }
-        return $data;
+            return $data;   
+        }else{
+            return false;
+        }
 	}
 
 	/**

@@ -40,9 +40,9 @@
                         '<span>'+info.create_time+'</span>'+
                         '<h1><a target="_blank" href="/article/'+info.article_id+'">'+info.article_title+'</a></h1>';
                     if(info.note.length>=100){
-                        html +='<p>'+info.note.substring(0,100)+'</p>';
+                        html +='<p>'+info.title.substring(0,100)+'</p>';
                     }else{
-                        html +='<p>'+info.note+'</p>';
+                        html +='<p>'+info.title+'</p>';
                     }
                     html +='<p><a href="" class="blog-continue">continue reading</a></p>'+
                         '</div>'+

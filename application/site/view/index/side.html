@@ -66,7 +66,7 @@
             success: function (informationinfo) {
                 var html = "";
                 $.each(informationinfo, function(informationinfo, info){
-                    html+="<li><a href='"+info.url+"' target='_blank'>"+info.article_title.substring(0,18)+"...</title></a></li>";
+                    html+="<li><a href='"+info.url+"' target='_blank'>"+info.title.substring(0,18)+"...</title></a></li>";
                 });
                 $("#information").html(html);
             }
@@ -81,7 +81,7 @@
             success: function(informationinfo){
                 var html = "";
                 $.each(informationinfo, function(informationinfo, info){
-                    html+="<li><a href='"+info.url+"' target='_blank'>"+info.article_title.substring(0,17)+"...</title></a></li>";
+                    html+="<li><a href='"+info.url+"' target='_blank'>"+info.title.substring(0,17)+"...</title></a></li>";
                 });
                 $("#information").html(html);
             }
@@ -91,7 +91,7 @@
         //加载个人信息
         $.ajax({
             type: "GET",
-            url: "/userinfo",
+            url: "/ajax_siteinfo",
             dataType: "json",
             success: function(userinfo){
                 var data = JSON.parse(userinfo.contact);   
@@ -111,7 +111,7 @@
         //加载广告信息
         $.ajax({
             type: "GET",
-            url: "/sponsorinfo",
+            url: "/ajax_sponsorinfo",
             dataType: "json",
             success: function(info){
                 $("#first_sidebar img").attr('src','__STATIC__/images/qrcode_HaI.jpg');
