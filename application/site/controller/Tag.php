@@ -7,7 +7,6 @@
  */
 
 namespace app\site\controller;
-use app\blog\model\Tags;
 
 class Tag extends Base
 {
@@ -16,9 +15,9 @@ class Tag extends Base
      * @return mixed
      */
     public function index($tag){
-        $list = Tags::getbyvalue($tag);
+        $list = $this->ArticleTags::getbyvalue($tag);
         if(empty($list)){
-            return $this->fetch('error/error',['code'=>404,'msg'=>'File not found']);
+            $this->redirect('/error');
         }
         $allart = $this->Article->getAllArticleByTag($list['id']);
         $this->assign('allart',$allart);

@@ -16,7 +16,7 @@
         {volist name="allart" id="v"}
         <article class="am-g blog-entry-article">
             <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img" style="width:400px;height:155px;overflow: hidden;">
-                <a target="_blank" href="/details/<{$v.article_id}>"><img src="<{$v.pic}>" alt="" class="am-u-sm-12"></a>
+                <a target="_blank" href="/article/<{$v.article_id}>"><img src="<{$v.pic}>" alt="" class="am-u-sm-12"></a>
             </div>
             <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
                 <span>
@@ -24,7 +24,7 @@
                 </span>
                 <span>@__NICK_NAME__ &nbsp;</span>
                 <span><{$v.create_time}></span>
-                <h1><a target="_blank" href="/details/<{$v.article_id}>"><{$v.article_title}></a></h1>
+                <h1><a target="_blank" href="/article/<{$v.article_id}>"><{$v.article_title}></a></h1>
                 {if mb_strlen($v.note,'utf8')>=100}
                 <p><{$v.note|mb_substr=0,100,'utf8'}>...</p>
                 {else/}
