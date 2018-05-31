@@ -11,12 +11,13 @@ namespace app\site\controller;
 class Tag extends Base
 {
     /**
+     * 标签页
      * @param $tag
-     * @return mixed
      */
     public function index($tag){
         $list = $this->ArticleTags::getbyvalue($tag);
-        if(empty($list)){
+        if(empty($list))
+        {
             $this->redirect('/error');
         }
         $allart = $this->Article->getAllArticleByTag($list['id']);
@@ -25,9 +26,4 @@ class Tag extends Base
         return $this->fetch();
     }
 
-    public function taginfo(){
-        if(request()->isAjax()){
-            return $this->Tag;
-        }
-    }
 }

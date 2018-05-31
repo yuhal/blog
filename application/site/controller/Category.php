@@ -11,13 +11,14 @@ namespace app\site\controller;
 class Category extends Base
 {
     /**
-     * 分类首页
+     * 分类页
      * @param $cate
      */
     public function index($cate){
         $ArticleType = $this->ArticleType;
         $list = $ArticleType::getbyvalue($cate);
-        if(empty($list)){
+        if(empty($list))
+        {
             $this->redirect('/error');
         }
         $where['type_id'] = $list['id'];

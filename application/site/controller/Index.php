@@ -1,13 +1,11 @@
 <?php
 namespace app\site\controller;
-use think\Request;
 
 class Index extends Base
 {
 
     /**
-     * Index constructor.
-     * @param Request|null $request
+     * 初始化操作
      */
     public function __construct()
     {
@@ -16,21 +14,23 @@ class Index extends Base
     }
 
     /**
-     * @param int $p
-     * @param string $title
-     * @return \data|mixed|\strings
+     * 首页
+     * @param p
+     * @param article_title
      */
     public function index($p=1,$article_title='')
     {      
         $article_title = str_content_replace($article_title);
         $where['a.article_title'] = ['like',"%{$article_title}%"];
         $allart = $this->Article->getAllArticleByWhere($p,$where,$this->pageSize);
-        if(empty($allart)){
+        if(empty($allart))
+        {
             $this->redirect('/error');
         }
         $count= count($allart);
-		$page = ceil($count/$this->pageSize);//总页数
-        if(request()->isAjax()){
+		$page = ceil($count/$this->pageSize);
+        if(request()->isAjax())
+        {
             return $allart;
         }
 
@@ -41,10 +41,15 @@ class Index extends Base
     	return $this->fetch();
 	}
 
+    /**
+     * 关于页面
+     * @param id
+     */
     public function about($id=7){
         $where['article_id'] = $id;
         $content = $this->Article->getArticleByWhere($where);
-        if(empty($content)){
+        if(empty($content))
+        {
             $this->redirect('/error');
         }
         $content['des'] = $this->Article->getDes()->where("pid={$id}")->select();
@@ -60,19 +65,24 @@ class Index extends Base
     { 
         $where['article_id'] = $id;
         $content = $this->Article->getArticleByWhere($where);
-        if(empty($content)){
+        if(empty($content))
+        {
             $this->redirect('/error');
         }
         $content['des'] = $this->Article->getDes()->where('article_id',$id)->select();
-        if($content['show_type']==1){
+        if($content['show_type']==1)
+        {
             return $this->fetch('index/about',['content'=>$content]);
         }
         $arr = ishav_str_array(',',$content['tag_ids']);
-        if(empty($arr)){
+        if(empty($arr))
+        {
             $str = ''; 
-        }elseif(empty($arr[1])){
+        }elseif(empty($arr[1]))
+        {
             $str = '<span title="Tags" class="am-icon-tag"> &nbsp;</span>'; 
-        }else{
+        }else
+        {
             $str = '<span title="Tags" class="am-icon-tags"> &nbsp;</span>'; 
         }
         foreach ($arr as $k=>$v){
@@ -88,7 +98,6 @@ class Index extends Base
 
     /**
      * 文章归档页
-     * @param $id
      */
     public function timeline()
     {

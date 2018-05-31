@@ -5,15 +5,26 @@ use traits\model\SoftDelete;
 
 class Article extends Model{
 
+    /**
+     * 使用软删除
+     */
     use softdelete;
 
-    // 设置当前模型对应的完整数据表名称
+    /**
+     * 设置当前模型对应的完整数据表名称
+     */
     protected $table = 'yh_article';
 
+    /**
+     * 数据类型转换
+     */
     protected $type = [
         'create_time'  =>  'datetime:Y/m/d',
     ];
 
+    /**
+     * 初始化操作
+     */
     function __construct(){
         $this->expire_time = config('redis.expire_time');
     }
