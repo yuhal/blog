@@ -31,7 +31,6 @@ class Article extends Model{
 
     /**
      * 关联查询某个文章的详情
-     * @return \think\model\relation\HasMany
      */
     public function getDes()
     {
@@ -48,7 +47,7 @@ class Article extends Model{
 	}
 
 	/**
-	 * 查询上一篇id
+	 * 查询上一篇文章id
 	 * @param $id
 	 */ 
 	public function getLastidById($id){
@@ -56,7 +55,7 @@ class Article extends Model{
 	} 
 
 	/**
-	 * 查询下一篇id
+	 * 查询下一篇文章id
 	 * @param $id
 	 */ 
 	public function getNextidById($id){
@@ -68,7 +67,7 @@ class Article extends Model{
 	 * 查询所有的文章
 	 * @param $p
      * @param $where
-     * @param $limit
+     * @param $pageSize
 	 */
 	public function getAllArticleByWhere($p,$where,$pageSize){
         $start = ($p-1)*$pageSize;
@@ -86,8 +85,8 @@ class Article extends Model{
 	}
 
     /**
+     * 获取单个标签下所有的文章
      * @param $tag_id
-     * @return \data|\strings
      */
 	public function getAllArticleByTag($tag_id){
         $data = $this->alias('a')
@@ -142,7 +141,7 @@ class Article extends Model{
 
 	/**
 	 * 查询某个文章的详情
-	 * @param string $where 
+	 * @param $where 
 	 */
 	public function getArticleByWhere($where){
         return $this->alias('a')
