@@ -25,12 +25,17 @@ class Base extends Controller
     public function __construct()
     {     
         parent::__construct();
+
+        //验证站点信息
         $this->assign('site_info',$this->checkdomain());
+
+        //初始化model
         $this->Information = model('site/Information');
         $this->Article = model('site/Article');
         $this->ArticleType = model('site/ArticleType');
         $this->ArticleTags = model('site/ArticleTags');
         $this->pageSize = config('paginate.list_rows');
+        
         $this->assign('Tag',$this->ArticleTags->getAllTags());
     }
 
