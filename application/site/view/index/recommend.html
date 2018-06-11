@@ -10,7 +10,7 @@
                     <span>
 						<a href="" class="blog-green"><{$v.value}> &nbsp;</a>
                     </span>               
-                    <h1 class="blog-h-margin"><a target="_blank" href="__APP__/article/<{$v.article_id}>">
+                    <h1 class="blog-h-margin"><a href="__APP__/article/<{$v.article_id}>">
                     {if mb_strlen($v.article_title)>=33}
                     	<{$v.article_title|mb_substr=0,33}>...
                     {else/}

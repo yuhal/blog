@@ -101,7 +101,7 @@
                 $(".introduce").text(userinfo.introduce);
                 var html = '';
                 $.each(data, function(data, info){
-                    html+="<a target='_blank' title='"+info.name+"' href='"+info.value+"'><span class='am-icon-"+info.name+" am-icon-fw am-primary blog-icon'></span></a> ";
+                    html+="<a title='"+info.name+"' href='"+info.value+"'><span class='am-icon-"+info.name+" am-icon-fw am-primary blog-icon'></span></a> ";
                 });
                 $("#contact").html(html);
             }
