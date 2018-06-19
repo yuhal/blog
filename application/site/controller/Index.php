@@ -18,22 +18,17 @@ class Index extends Base
      * @param p
      * @param article_title
      */
-    public function index($p=1,$article_title='')
+    public function index($p=1)
     {      
-        $article_title = str_content_replace($article_title);
+        $article_title = str_content_replace(input('get.title'));
         $where['a.article_title'] = ['like',"%{$article_title}%"];
         $allart = $this->Article->getAllArticleByWhere($p,$where,$this->pageSize);
-        if(empty($allart))
-        {
-            $this->redirect('/error');
-        }
         $count= count($allart);
 		$page = ceil($count/$this->pageSize);
         if(request()->isAjax())
         {
             return $allart;
         }
-
 		$this->assign('allart',$allart);
 		$this->assign('p',$p);
 		$this->assign('page',$page);

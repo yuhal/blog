@@ -4,7 +4,7 @@
 {/block}
 {block name="main"}
 <style>
-    am-pagination li:first-child{
+    .am-pagination li:first-child{
         padding:50px;
     }  
     #Pagination a{
@@ -13,6 +13,14 @@
     }
     .am-pagination{
         float: left;
+    }
+    .tle{
+        font-size: 20px;
+    }
+    .alc{
+        background-color: white;
+        border:0px;font-size: 13px;
+        height: 73px;
     }
 </style>
 <script>
@@ -39,11 +47,7 @@
                         '<span> @<{$site_info.nick_name}> &nbsp; </span>'+
                         '<span>'+info.create_time+'</span>'+
                         '<h1><a href="/article/'+info.article_id+'">'+info.article_title+'</a></h1>';
-                    if(info.note.length>=100){
-                        html +='<p>'+info.title.substring(0,100)+'</p>';
-                    }else{
-                        html +='<p>'+info.note+'</p>';
-                    }
+                    html +='<pre style="overflow: hidden;" class="alc">'+info.note+'</pre>';
                     html +='<p><a href="" class="blog-continue">continue reading</a></p>'+
                         '</div>'+
                         '</article>';
@@ -77,65 +81,66 @@
         });       
         function toRed(content){
             var bodyHtml = $(".tle").html();
-            var x = bodyHtml.replace(new RegExp(content,"gm"),"<font color='red'>"+content+"</font>");
+            var x = bodyHtml.replace(new RegExp(content,"mi"),"<font color='red'>"+content+"</font>");
             $(".tle").html(x);
             var bodyHtml = $(".alc").html();
-            var x = bodyHtml.replace(new RegExp(content,"gm"),"<font color='red'>"+content+"</font>");
+            var x = bodyHtml.replace(new RegExp(content,"gim"),"<font color='red'>"+content+"</font>");
             $(".alc").html(x);
+            console.log(new RegExp(content,"mi"));
         }
         </script>           
         <h7 class="am-article-title blog-text-center"><{$title}>&nbsp;的搜索结果</h7>
         {/if}
-        <div id="list">
-            {volist name="allart" id="v"}
-            <article class="am-g blog-entry-article">
-                <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img" style="width:400px;height:155px;overflow: hidden;">
-                    <a href="/article/<{$v.article_id}>"><img src="<{$v.pic}>" alt="" class="am-u-sm-12"></a>
-                </div>
-                <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
-                <span>
-                	<a style="color:<{$v.color}>" href="/categories/<{$v.value}>" class="blog"><{$v.value}> &nbsp;</a>
-                </span>
-                    <span> @<{$site_info.nick_name}> &nbsp;</span>
-                    <span><{$v.create_time}></span>
-                    <h1><a class="tle" href="/article/<{$v.article_id}>"><{$v.article_title}></a></h1>
-                    {if mb_strlen($v.note,'utf8')>=100}
-                    <p class="alc"><{$v.note|mb_substr=0,100,'utf8'}>...</p>
-                    {else/}
-                    <p class="alc"><{$v.note}></p>
+        {if count($allart)>0}
+            <div id="list">
+                {volist name="allart" id="v"}
+                <article class="am-g blog-entry-article">
+                    <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img" style="width:400px;height:155px;overflow: hidden;">
+                        <a href="/article/<{$v.article_id}>"><img src="<{$v.pic}>" alt="" class="am-u-sm-12"></a>
+                    </div>
+                    <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
+                    <span>
+                        <a style="color:<{$v.color}>" href="/categories/<{$v.value}>" class="blog"><{$v.value}> &nbsp;</a>
+                    </span>
+                        <span> @<{$site_info.nick_name}> &nbsp;</span>
+                        <span><{$v.create_time}></span>
+                        <h1><a class="tle" href="/article/<{$v.article_id}>"><{$v.article_title}></a></h1>
+                        <pre style="overflow: hidden;" class="alc"><{$v.note}></pre>
+                    </div>
+                </article>
+                {/volist}
+            </div>
+            {if is_mobile_request()==false || $allart=='null'}
+            <ul class="am-pagination" style="margin-right: 105px">
+                <li class="am-pagination-prev">
+                    {if $p==1}
+                    <a class="prev" href="javascript:void()">&laquo; Prev</a>
+                    {else}
+                    <a class="prev" href="javascript:showlist(<{$p-1}>,<{$page}>);">&laquo; Prev</a>
                     {/if}
-                </div>
-            </article>
-            {/volist}
-        </div>
-        {if is_mobile_request()==false || $allart==null}
-        <ul class="am-pagination" style="margin-right: 105px">
-            <li class="am-pagination-prev">
-                {if $p==1}
-                <a class="prev" href="javascript:showlist(1,<{$page}>);">&laquo; Prev</a>
-                {else/}
-                <a class="prev" href="javascript:showlist(<{$p-1}>,<{$page}>);">&laquo; Prev</a>
-                {/if}
-            </li>
-        </ul>
-        {/if}
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $("#Pagination").pagination(<{$page}>);
-            });
-        </script>
-        <ul class="am-pagination" id="Pagination" >
-        </ul>
-        {if is_mobile_request()==false || $allart==null}
-        <ul class="am-pagination" style="float: right">
-            <li class="am-pagination-next">
-                {if $p==$page}
-                <a class="next" href="javascript:showlist(<{$page}>,<{$page}>);">&raquo; Next</a>
-                {else/}
-                <a class="next" href="javascript:showlist(<{$p+1}>,<{$page}>);">Next &raquo;</a>
-                {/if}
-            </li>
-        </ul>
+                </li>
+            </ul>
+            {/if}
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $("#Pagination").pagination(<{$page}>);
+                });
+            </script>
+            <ul class="am-pagination" id="Pagination" >
+            </ul>
+            {if is_mobile_request()==false || $allart=='null'}
+            <ul class="am-pagination" style="float: right">
+                <li class="am-pagination-next">
+                    {if $p==$page}
+                    <a class="next" href="javascript:void()">&raquo; Next</a>
+                    {else/}
+                    <a class="next" href="javascript:showlist(<{$p+1}>,<{$page}>);">Next &raquo;</a>
+                    {/if}
+                </li>
+            </ul>
+            {/if}
+        {else}
+            <h5 class="am-article-title blog-text-center">换个词试试吧!</h5>
         {/if}
     </div>
 {/block}

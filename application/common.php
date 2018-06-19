@@ -33,6 +33,27 @@ function getAccessToken($url,$type){
     }        
 }
 
+/**
+ * 取出html标签
+ * 
+ * @access public
+ * @param string str
+ * @return string
+ * 
+ */
+function deletehtml($str) {
+    $str = trim($str); //清除字符串两边的空格
+    $str = str_replace("&nbsp;","",$str);//将空格替换成空
+    $str = strip_tags($str); //利用php自带的函数清除html格式。保留P标签
+    $str = preg_replace("/\t/","",$str); //使用正则表达式匹配需要替换的内容，如：空格，换行，并将替换为空。
+    $str = preg_replace("/\r\n/","",$str); 
+    $str = preg_replace("/\r/","",$str); 
+    $str = preg_replace("/\n/","",$str); 
+    $str = preg_replace("/ /","",$str);
+    $str = preg_replace("/&nbsp; /","",$str);  //匹配html中的空格
+    return $str; //返回字符串
+}
+
 function parse_data($url,$data=''){
     if(!empty($data)){
         $res=http_request($url,$data);
