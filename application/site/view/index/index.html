@@ -23,6 +23,7 @@
         height: 73px;
     }
 </style>
+<script type="text/javascript" src="http://www.liidon.com/themes/1502429977/images/jquery.textSearch-1.0.js"></script>
 <script>
     function showlist(obj,page){
         var title = $("#title").val();
@@ -42,9 +43,9 @@
                         '</div>'+
                         '<div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">'+
                         '<span>'+
-                        '<a style="color:'+info.color+'" href="/categories/'+info.value+'" class="blog">'+info.value+' &nbsp;</a>'+
+                        '<a style="color:'+info.color+'" href="/categories/'+info.value+'" class="blog">'+info.value+' </a>'+
                         '</span>'+
-                        '<span> @<{$site_info.nick_name}> &nbsp; </span>'+
+                        '<span> @<{$site_info.nick_name}>  </span>'+
                         '<span>'+info.create_time+'</span>'+
                         '<h1><a href="/article/'+info.article_id+'">'+info.article_title+'</a></h1>';
                     html +='<pre style="overflow: hidden;" class="alc">'+info.note+'</pre>';
@@ -76,20 +77,25 @@
     <div class="am-u-md-8 am-u-sm-12">
         {if $title}  
         <script>
-        $(function(){
-            toRed("<{$title}>");
-        });       
-        function toRed(content){
-            var bodyHtml = $(".tle").html();
-            var x = bodyHtml.replace(new RegExp(content,"mi"),"<font color='red'>"+content+"</font>");
-            $(".tle").html(x);
-            var bodyHtml = $(".alc").html();
-            var x = bodyHtml.replace(new RegExp(content,"gim"),"<font color='red'>"+content+"</font>");
-            $(".alc").html(x);
-            console.log(new RegExp(content,"mi"));
-        }
+            $(function (){
+                var title = "<{$title}>";
+                $("#list").textSearch(title.toLowerCase());
+            });
+        // $(function(){
+        //     var title = "<{$title}>";
+        //     toRed(title.toLowerCase());
+        // });       
+        // function toRed(content){
+        //     var bodyHtml = $(".tle").html();
+        //     var x = bodyHtml.replace(new RegExp(content,"mi"),"<font color='red'>"+content+"</font>");
+        //     $(".tle").html(x);
+        //     var bodyHtml = $(".alc").html();
+        //     var x = bodyHtml.replace(new RegExp(content,"gim"),"<font color='red'>"+content+"</font>");
+        //     $(".alc").html(x);
+        //     console.log(new RegExp(content,"mi"));
+        // }
         </script>           
-        <h7 class="am-article-title blog-text-center"><{$title}>&nbsp;的搜索结果</h7>
+        <h7 class="am-article-title blog-text-center"><{$title}>的搜索结果</h7>
         {/if}
         {if count($allart)>0}
             <div id="list">
@@ -100,9 +106,9 @@
                     </div>
                     <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
                     <span>
-                        <a style="color:<{$v.color}>" href="/categories/<{$v.value}>" class="blog"><{$v.value}> &nbsp;</a>
+                        <a style="color:<{$v.color}>" href="/categories/<{$v.value}>" class="blog"><{$v.value}> </a>
                     </span>
-                        <span> @<{$site_info.nick_name}> &nbsp;</span>
+                        <span> @<{$site_info.nick_name}> </span>
                         <span><{$v.create_time}></span>
                         <h1><a class="tle" href="/article/<{$v.article_id}>"><{$v.article_title}></a></h1>
                         <pre style="overflow: hidden;" class="alc"><{$v.note}></pre>

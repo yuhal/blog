@@ -3,7 +3,7 @@
 {block name="main"}
 <script type="text/javascript">
 window.onload=function(){
-  $(".am-article-bd a").attr("target","_blank");
+  $(".am-article-bd a").attr("target","");
 } 
 </script>
 <!-- content srart -->
@@ -11,9 +11,9 @@ window.onload=function(){
   {if is_mobile_request()==false}
 	<div style="position:fixed;width:130px;top:90px;left:0px;overflow: hidden;">
 	 <ul id="amul" class="am-pagination blog-article-margin">
-	 	 <li><a style="cursor: pointer"><span class="am-icon-list"> &nbsp;</span>目录</a></li>
+	 	 <li><a style="cursor: pointer"><span class="am-icon-list"> </span>目录</a></li>
          {volist name="content['des']" id="v" key="k" }
-         <li class="amulli"><a href="#<{$v.name}>"><{$k}>&nbsp;<{$v.name}></a></li>
+         <li class="amulli"><a href="#<{$v.name}>"><{$k}><{$v.name}></a></li>
          {/volist}
      </ul>
 	</div> 
@@ -24,9 +24,9 @@ window.onload=function(){
           <h1 style="font-size:32px;" class="am-article-title blog-text-center"><{$content.article_title}></h1>
           <p class="am-article-meta blog-text-center">
             <span>
-			      <a style="color: <{$content.color}>;" href="/categories/<{$content.value}>" class="blog>"><{$content.value}> &nbsp;</a>
+			      <a style="color: <{$content.color}>;" href="/categories/<{$content.value}>" class="blog>"><{$content.value}> </a>
             </span>-
-            <span><a href=""><i class="am-icon-at am-icon-fw"></i><{$site_info.nick_name}> &nbsp;</a></span>-
+            <span><a href=""><i class="am-icon-at am-icon-fw"></i><{$site_info.nick_name}> </a></span>-
             <span><a href=""><{$content.create_time}></a></span>
           </p>
         </div>        
@@ -42,13 +42,13 @@ window.onload=function(){
           <div id="share" class="am-u-lg-4 am-u-md-5 am-u-sm-7 am-u-sm-centered blog-text-center">
               <{$content['tags']}>
             <hr>
-            <span title="share to" class="am-icon-share am-icon-fw am-primary"></span>&nbsp;&nbsp;&nbsp;
-            <a title="Sina" target="_blank" href="http://service.weibo.com/share/share.php?title=<{$content.article_title}>"><span class="am-icon-weibo am-icon-fw blog-icon"></span></a>
+            <span title="share to" class="am-icon-share am-icon-fw am-primary"></span>
+            <a title="Sina" target="" href="http://service.weibo.com/share/share.php?title=<{$content.article_title}>"><span class="am-icon-weibo am-icon-fw blog-icon"></span></a>
             <a title="Facebook" href="javascript:window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(document.location.href)+'&amp;t='+encodeURIComponent(document.title),'toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=600, height=450,top=100,left=350');void(0)">
                 <span class="am-icon-facebook am-icon-fw am-primary blog-icon"></span>
             </a>
-            <script type="text/javascript">document.write(['<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=',encodeURIComponent(location.href),'&title=',encodeURIComponent(document.title),'" target="_blank"   title="Qzone"><span class="am-icon-star am-icon-fw am-primary blog-icon"></span></a>'].join(''));</script>
-            <a title="Wechat" target="_blank" href=""><span class="am-icon-wechat am-icon-fw blog-icon"></span></a>
+            <script type="text/javascript">document.write(['<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=',encodeURIComponent(location.href),'&title=',encodeURIComponent(document.title),'" target=""   title="Qzone"><span class="am-icon-star am-icon-fw am-primary blog-icon"></span></a>'].join(''));</script>
+            <a title="Wechat" target="" href=""><span class="am-icon-wechat am-icon-fw blog-icon"></span></a>
 
           </div>
         </div>

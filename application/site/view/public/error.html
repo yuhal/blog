@@ -29,7 +29,7 @@
                 var data = JSON.parse(userinfo.contact);
                 var html = '';
                 $.each(data, function (data, info) {
-                    html += "<a target='_blank' title='" + info.name + "' href='" + info.value + "'><span class='am-icon-" + info.name + " am-icon-fw am-primary blog-icon'></span></a> ";
+                    html += "<a target='' title='" + info.name + "' href='" + info.value + "'><span class='am-icon-" + info.name + " am-icon-fw am-primary blog-icon'></span></a> ";
                 });
                 $("#contact").html(html);
             }
