@@ -72,7 +72,7 @@ class Article extends Model{
      * @param $where
      * @param $pageSize
 	 */
-	public function getAllArticleByWhere($p,$where,$pageSize)
+	public function getArticle($p,$where,$pageSize)
     {
         $start = ($p-1)*$pageSize;
         $data = $this->alias('a')
@@ -87,13 +87,16 @@ class Article extends Model{
                 $data[$key]['pic'] = getOnePicturesByGroupName();
                 if(!$value['note']) $data[$key]['note'] = $this->getNoteByArticleid($value['article_id']);
             }  
-            //var_dump('<pre>',$data);exit; 
             return $data;  
         }else{
             return null;
         }
 	}
 
+    public function getArticleCount($where){
+        return $this->alias('a')->where($where)->count();
+    }
+ 
     /**
      * 获取单个标签下所有的文章
      * @param $tag_id

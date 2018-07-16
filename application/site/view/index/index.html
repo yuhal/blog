@@ -26,6 +26,7 @@
 <script type="text/javascript" src="http://www.liidon.com/themes/1502429977/images/jquery.textSearch-1.0.js"></script>
 <script>
     function showlist(obj,page){
+        console.log(1);
         var title = $("#title").val();
         var url = "/Index/index";
         var data = {p:obj,title:title};
@@ -120,7 +121,7 @@
             <ul class="am-pagination" style="margin-right: 105px">
                 <li class="am-pagination-prev">
                     {if $p==1}
-                    <a class="prev" href="javascript:void()">&laquo; Prev</a>
+                    <a class="prev" href="javascript:void(0)">&laquo; Prev</a>
                     {else}
                     <a class="prev" href="javascript:showlist(<{$p-1}>,<{$page}>);">&laquo; Prev</a>
                     {/if}
@@ -138,8 +139,8 @@
             <ul class="am-pagination" style="float: right">
                 <li class="am-pagination-next">
                     {if $p==$page}
-                    <a class="next" href="javascript:void()">&raquo; Next</a>
-                    {else/}
+                    <a class="next" href="javascript:void(0)">&raquo; Next</a>
+                    {else}
                     <a class="next" href="javascript:showlist(<{$p+1}>,<{$page}>);">Next &raquo;</a>
                     {/if}
                 </li>

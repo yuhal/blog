@@ -22,8 +22,8 @@ class Index extends Base
     {      
         $article_title = str_content_replace(input('get.title'));
         $where['a.article_title'] = ['like',"%{$article_title}%"];
-        $allart = $this->Article->getAllArticleByWhere($p,$where,$this->pageSize);
-        $count= count($allart);
+        $allart = $this->Article->getArticle($p,$where,$this->pageSize);
+        $count= $this->Article->getArticleCount($where);
 		$page = ceil($count/$this->pageSize);
         if(request()->isAjax())
         {
