@@ -14,11 +14,11 @@ return [
     // 服务器地址
     'hostname'       => '118.31.23.98',
     // 数据库名
-    'database'       => 'yuhal',
+    'database'       => 'blog',
     // 用户名
-    'username'       => 'yuhal',
+    'username'       => 'root',
     // 密码
-    'password'       => '021e58e57afc',
+    'password'       => '0507.HaI',
     // 端口
     'hostport'       => '3306',
     // 连接dsn
