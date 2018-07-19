@@ -101,4 +101,12 @@ class Index extends Base
         return $this->fetch();
     }
 
+    /**
+     * 管理中心
+     */
+    public function ocean()
+    {
+        $this->redirect('http://ocean.yuhal.com');
+    }
+
 }

@@ -9,7 +9,10 @@ trait Middle
 	public function checkdomain()
 	{
 		$url=explode(".", input('server.HTTP_HOST'));
-		$domain = isset($url[0]) ? $url[0] : 'hai';
+		$domain = $url[0];
+		if($domain=='www'){
+			$domain = 'hai';
+		}
 		$site_info = getUser(['domain'=>$domain]);
 		if($site_info)
 		{

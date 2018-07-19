@@ -35,6 +35,8 @@ return [
         'ajax_siteinfo'      => 'site/base/ajax_siteinfo',
         //广告信息
         'ajax_sponsorinfo'   => 'site/base/ajax_sponsorinfo',
+    /**********管理中心*********/
+        'ocean'              => 'site/index/ocean',
     /*********pub*********/
         //空路由
         '__MISS__'           => 'site/base/error_page', 
