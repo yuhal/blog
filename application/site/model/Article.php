@@ -27,6 +27,7 @@ class Article extends Model{
      */
     function __construct(){
         $this->expire_time = config('redis.expire_time');
+        $this->site_info = session('site_info');
     }
 
     /**
@@ -53,7 +54,11 @@ class Article extends Model{
 	 */ 
 	public function getLastidById($id)
     {
-        return $this->field('article_id')->where("article_id < {$id}")->order('create_time desc')->value('article_id');
+        return $this->field('article_id')
+        ->where("user_id = {$this->site_info['id']}")
+        ->where("article_id < {$id}")
+        ->order('create_time desc')
+        ->value('article_id');
 	} 
 
 	/**
@@ -62,7 +67,11 @@ class Article extends Model{
 	 */ 
 	public function getNextidById($id)
     {
-        return $this->field('article_id')->where("article_id > {$id}")->order('article_id asc')->value('article_id');
+        return $this->field('article_id')
+        ->where("user_id = {$this->site_info['id']}")
+        ->where("article_id > {$id}")
+        ->order('article_id asc')
+        ->value('article_id');
 
 	}
 
@@ -89,7 +98,7 @@ class Article extends Model{
             }  
             return $data;  
         }else{
-            return null;
+            return '';
         }
 	}
 
@@ -118,7 +127,7 @@ class Article extends Model{
             }
             return $data;    
         }else{
-            return null;
+            return '';
         }
         
     }
@@ -140,6 +149,7 @@ class Article extends Model{
                 $data[$year][$i] = $this->alias('a')
                     ->join('article_type b','b.id=a.type_id')
                     ->field('a.article_id,a.article_title,from_unixtime(unix_timestamp(a.create_time),"%Y/%m/%d") as create_time,a.note,b.value,b.color')
+                    ->where("a.user_id = {$this->site_info['id']}")
                     ->where("a.create_time between '{$x}' and '{$y}'")
                     ->order('a.create_time desc')
                     ->select();
@@ -150,7 +160,7 @@ class Article extends Model{
             }
             return $data;   
         }else{
-            return null;
+            return '';
         }
 	}
 
@@ -160,13 +170,15 @@ class Article extends Model{
      */
     public function getNoteByArticleid($article_id)
     {
-        $data = $this->getDes()->where('article_id',$article_id)->value('text');
+        $data = $this->getDes()
+        ->where('article_id',$article_id)
+        ->value('text');
         if($data)
         {
             $note = deletehtml(htmlspecialchars_decode($data));
             return $note;
         }else{
-            return null;
+            return '';
         }
     }
 
@@ -185,7 +197,7 @@ class Article extends Model{
         {
             return $data;
         }else{
-            return null;
+            return '';
         }
 	}
 

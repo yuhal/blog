@@ -16,8 +16,6 @@ trait Middle
 		$site_info = getUser(['domain'=>$domain]);
 		if($site_info)
 		{
-			session('domain',$domain);
-     		session('site_info_'.$domain,$site_info);
         	return $site_info;
         }else
         {

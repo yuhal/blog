@@ -27,8 +27,9 @@ class Base extends Controller
         parent::__construct();
 
         //验证站点信息
-        $this->assign('site_info',$this->checkdomain());
-
+        $this->site_info = $this->checkdomain();
+        session('site_info',$this->site_info);
+        $this->assign('site_info',$this->site_info);
         //初始化model
         $this->Information = model('site/Information');
         $this->Article = model('site/Article');

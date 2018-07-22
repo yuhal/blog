@@ -42,6 +42,7 @@ class Index extends Base
      */
     public function about($id=7){
         $where['article_id'] = $id;
+        $where['user_id'] = $this->site_info['id'];
         $content = $this->Article->getArticleByWhere($where);
         if(empty($content))
         {
@@ -59,6 +60,7 @@ class Index extends Base
     public function article($id)
     { 
         $where['article_id'] = $id;
+        $where['user_id'] = $this->site_info['id'];
         $content = $this->Article->getArticleByWhere($where);
         if(empty($content))
         {
