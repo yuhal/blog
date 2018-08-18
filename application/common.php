@@ -66,7 +66,7 @@ function parse_data($url,$data=''){
 }
 
 
-function getUser($where){
+function getSiteInfo($where){
     return db('user')->field('pwd',true)->where($where)->find();
 }
 

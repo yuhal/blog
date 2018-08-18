@@ -18,9 +18,10 @@
         font-size: 20px;
     }
     .alc{
+        margin-top:0rem;
         background-color: white;
         border:0px;font-size: 13px;
-        height: 73px;
+        height: 103px;
     }
 </style>
 <script type="text/javascript" src="http://www.liidon.com/themes/1502429977/images/jquery.textSearch-1.0.js"></script>
@@ -43,13 +44,8 @@
                         '<a href="/article/'+info.article_id+'"><img src="'+info.pic+'" alt="" class="am-u-sm-12"></a>'+
                         '</div>'+
                         '<div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">'+
-                        '<span>'+
-                        '<a style="color:'+info.color+'" href="/categories/'+info.value+'" class="blog">'+info.value+' </a>'+
-                        '</span>'+
-                        '<span> @<{$site_info.nick_name}>  </span>'+
-                        '<span>'+info.create_time+'</span>'+
-                        '<h1><a href="/article/'+info.article_id+'">'+info.article_title+'</a></h1>';
-                    html +='<pre style="overflow: hidden;" class="alc">'+info.note+'</pre>';
+                        '<h4><a href="/article/'+info.article_id+'">'+info.article_title+'</a></h4>';
+                    html +='<p style="overflow: hidden;" class="alc">'+info.note+'</p>';
                     html +='<p><a href="" class="blog-continue">continue reading</a></p>'+
                         '</div>'+
                         '</article>';
@@ -82,19 +78,6 @@
                 var title = "<{$title}>";
                 $("#list").textSearch(title.toLowerCase());
             });
-        // $(function(){
-        //     var title = "<{$title}>";
-        //     toRed(title.toLowerCase());
-        // });       
-        // function toRed(content){
-        //     var bodyHtml = $(".tle").html();
-        //     var x = bodyHtml.replace(new RegExp(content,"mi"),"<font color='red'>"+content+"</font>");
-        //     $(".tle").html(x);
-        //     var bodyHtml = $(".alc").html();
-        //     var x = bodyHtml.replace(new RegExp(content,"gim"),"<font color='red'>"+content+"</font>");
-        //     $(".alc").html(x);
-        //     console.log(new RegExp(content,"mi"));
-        // }
         </script>           
         <h7 class="am-article-title blog-text-center"><{$title}>的搜索结果</h7>
         {/if}
@@ -106,19 +89,14 @@
                         <a href="/article/<{$v.article_id}>"><img src="<{$v.pic}>" alt="" class="am-u-sm-12"></a>
                     </div>
                     <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
-                    <span>
-                        <a style="color:<{$v.color}>" href="/categories/<{$v.value}>" class="blog"><{$v.value}> </a>
-                    </span>
-                        <span> @<{$site_info.nick_name}> </span>
-                        <span><{$v.create_time}></span>
-                        <h1><a class="tle" href="/article/<{$v.article_id}>"><{$v.article_title}></a></h1>
-                        <pre style="overflow: hidden;" class="alc"><{$v.note}></pre>
+                    <h4><a class="tle" href="/article/<{$v.article_id}>"><{$v.article_title}></a></h4>
+                    <p style="overflow: hidden;" class="alc"><{$v.note}></p>
                     </div>
                 </article>
                 {/volist}
             </div>
             {if is_mobile_request()==false || $allart=='null'}
-            <ul class="am-pagination" style="margin-right: 105px">
+            <ul class="am-pagination" style="margin-right: 100px">
                 <li class="am-pagination-prev">
                     {if $p==1}
                     <a class="prev" href="javascript:void(0)">&laquo; Prev</a>

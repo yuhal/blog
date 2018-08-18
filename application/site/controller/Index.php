@@ -40,7 +40,8 @@ class Index extends Base
      * 关于页面
      * @param id
      */
-    public function about($id=7){
+    public function about($article_title='about me'){
+        $id = $this->Article->where('article_title',$article_title)->value('article_id');
         $where['article_id'] = $id;
         $where['user_id'] = $this->site_info['id'];
         $content = $this->Article->getArticleByWhere($where);
@@ -48,7 +49,7 @@ class Index extends Base
         {
             $this->redirect('/error');
         }
-        $content['des'] = $this->Article->getDes()->where("pid={$id}")->select();
+        $content['des'] = $this->Article->getDes()->where("article_id={$id}")->select();
         $this->assign('content',$content);
         return $this->fetch('index/about');
     }

@@ -13,13 +13,20 @@ trait Middle
 		if($domain=='www'){
 			$domain = 'hai';
 		}
-		$site_info = getUser(['domain'=>$domain]);
+		$site_info = getSiteInfo(['domain'=>$domain]);
 		if($site_info)
 		{
+			if(empty($site_info['outsetup'])){
+            	$this->redirect("http://yuhal.com/error");    
+            }else{
+            	foreach (json_decode($site_info['outsetup']) as $key => $value) {
+	                $site_info[$key] = $value;
+	            }	
+            }
         	return $site_info;
         }else
         {
-        	$this->redirect("http://www.yuhal.com");
+        	$this->redirect("http://yuhal.com/error");
         }
 
 	}

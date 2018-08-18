@@ -41,14 +41,14 @@
       $("#topbar li:eq(2)").addClass("am-active");
       $("#topbar li:eq(0)").removeClass("am-active");
       $("#first_sidebar p").hide();    
-      about();
+      //about();
       index();
       break; 
     default:
       $("#topbar li:eq(0)").addClass("am-active");
       $("#first_sidebar h2 span").text("赞助商");
       $("#second_sidebar").hide();
-      sponsor();
+      //sponsor();
       index();  
     }       
     $('#load').click(function (){
@@ -87,7 +87,7 @@
             }
         });
     }
-    function about(){
+    /*function about(){
         //加载个人信息
         $.ajax({
             type: "GET",
@@ -117,7 +117,7 @@
                 $("#first_sidebar img").attr('src','__STATIC__/images/qrcode_HaI.jpg');
             }
         });
-    }
+    }*/
 </script>
 <!-- content end -->
 
