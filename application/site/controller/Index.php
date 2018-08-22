@@ -40,8 +40,8 @@ class Index extends Base
      * 关于页面
      * @param id
      */
-    public function about($article_title='about me'){
-        $id = $this->Article->where('article_title',$article_title)->value('article_id');
+    public function about(){
+        $id = $this->Article->where('article_title',request()->instance()->action())->value('article_id');
         $where['article_id'] = $id;
         $where['user_id'] = $this->site_info['id'];
         $content = $this->Article->getArticleByWhere($where);
@@ -68,10 +68,6 @@ class Index extends Base
             $this->redirect('/error');
         }
         $content['des'] = $this->Article->getDes()->where('article_id',$id)->select();
-        if($content['show_type']==1)
-        {
-            return $this->fetch('index/about',['content'=>$content]);
-        }
         $arr = ishav_str_array(',',$content['tag_ids']);
         if(empty($arr))
         {
@@ -91,7 +87,18 @@ class Index extends Base
         $content['lastid'] = $this->Article->getLastidById($id);
         $content['nextid'] = $this->Article->getNextidById($id);
         $this->assign('content',$content);
-        return $this->fetch();
+        switch ($content['show_type']) {
+            case 0:
+                $fetch = '';
+                break;
+            case 1:
+                $fetch = 'index/about';
+                break;
+            case 2:
+                $fetch = 'index/full';
+                break;
+        }
+        return $this->fetch($fetch);
     }
 
     /**

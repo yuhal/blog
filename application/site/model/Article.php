@@ -190,7 +190,7 @@ class Article extends Model{
 	public function getArticleByWhere($where){
         $data = $this->alias('a')
 		->join('article_type b','b.id=a.type_id')
-		->field('a.article_title,a.create_time,a.note,b.color,b.show_type,b.value,a.article_id,a.tag_ids')
+		->field('a.article_title,a.create_time,a.note,b.color,a.show_type,b.value,a.article_id,a.tag_ids')
 		->where($where)
 		->find();
         if($data)
