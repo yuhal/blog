@@ -1,8 +1,8 @@
     <div class="am-u-md-4 am-u-sm-12 blog-sidebar">
         <div id="first_sidebar" class="blog-sidebar-widget blog-bor">
             <h2 class="blog-text-center blog-title"><span>微信公众号</span></h2>
-            <img src="http://www.3lian.com/js/grey.gif"  class="blog-entry-img" >
-            <p>购买广告位</p>
+            <a target="_blank" href="<{$site_info.linkurl}>"><img src="<{$site_info.imageurl}>"  class="blog-entry-img" ></a>
+            <p><a href="javascript:void(0);">购买广告位</a></p>
         </div>
         <div id="second_sidebar" class="blog-sidebar-widget blog-bor">
             <h2 class="blog-text-center blog-title"><span>联系我</span></h2>
@@ -46,7 +46,7 @@
       break; 
     default:
       $("#topbar li:eq(0)").addClass("am-active");
-      $("#first_sidebar h2 span").text("赞助商");
+      $("#first_sidebar h2 span").text("广告位");
       $("#second_sidebar").hide();
       //sponsor();
       index();  
@@ -87,37 +87,6 @@
             }
         });
     }
-    /*function about(){
-        //加载个人信息
-        $.ajax({
-            type: "GET",
-            url: "/ajax_siteinfo",
-            dataType: "json",
-            success: function(userinfo){
-                var data = JSON.parse(userinfo.contact);   
-                $("#first_sidebar img").attr('src','__STATIC__/images/qrcode_HaI.jpg');
-                $("#avatar").attr('src',userinfo.avatar);
-                $("#nickname").text(userinfo.nick_name);
-                $(".introduce").text(userinfo.introduce);
-                var html = '';
-                $.each(data, function(data, info){
-                    html+="<a title='"+info.name+"' href='"+info.value+"'><span class='am-icon-"+info.name+" am-icon-fw am-primary blog-icon'></span></a> ";
-                });
-                $("#contact").html(html);
-            }
-        });
-    }
-    function sponsor(){
-        //加载广告信息
-        $.ajax({
-            type: "GET",
-            url: "/ajax_sponsorinfo",
-            dataType: "json",
-            success: function(info){
-                $("#first_sidebar img").attr('src','__STATIC__/images/qrcode_HaI.jpg');
-            }
-        });
-    }*/
 </script>
 <!-- content end -->
 

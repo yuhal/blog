@@ -153,8 +153,14 @@ class Article extends Model{
                     ->where("a.create_time between '{$x}' and '{$y}'")
                     ->order('a.create_time desc')
                     ->select();
-                if(empty($data[$year][$i])){
+                    if(empty($data[$year][$i])){
                         unset($data[$year][$i]);
+                    }else{
+                        foreach ($data[$year][$i] as $key => $value) {
+                            if(is_mobile_request()==true){
+                                $data[$year][$i][$key]['create_time'] = date('m/d',strtotime($value['create_time']));    
+                            }
+                        }
                     }
                 }
             }

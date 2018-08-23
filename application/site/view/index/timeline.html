@@ -11,27 +11,39 @@
             <hr>
             {volist name="v" id="v2"}               
                 <ul>
-                    <h3><{$key}>月</h3>
-                    <hr>
-                    {volist name="v2" id="v3"}
+                <br>
+                <h3><{$key}>月</h3>
+                <hr>
+                {volist name="v2" id="v3"}
                     <li>
-                        <span class="am-u-sm-4 am-u-md-2 timeline-span"><{$v3.create_time}></span>
-                        <span class="am-u-sm-8 am-u-md-6">
-                            <a href="/article/<{$v3.article_id}>">
-                            {if strlen($v3.article_title)>=108}
-                                <{$v3.article_title|mb_substr=0,30,'utf8'}>...
-                            {else/}
-                                <{$v3.article_title}>
-                            {/if}
-                            </a>
-                        </span>
-                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">
-                            <a style="color:<{$v3.color}>" href="/categories/<{$v3.value}>" class="blog"><{$v3.value}> </a>
-                        </span>
-                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only"><{$site_info.nick_name}></span>
+                        {if is_mobile_request()==false}
+                            <span class="am-u-sm-4 am-u-md-2 timeline-span"><{$v3.create_time}></span>
+                            <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">
+                                <a style="color:<{$v3.color}>" href="/categories/<{$v3.value}>" class="blog"><{$v3.value}> </a>
+                            </span>
+                            <span class="am-u-sm-12 am-u-md-8">
+                                <a href="/article/<{$v3.article_id}>">
+                                {if strlen($v3.article_title)>=108}
+                                    <{$v3.article_title|mb_substr=0,30,'utf8'}>...
+                                {else/}
+                                    <{$v3.article_title}>
+                                {/if}
+                                </a>
+                            </span>
+                        {else}
+                            <span class="am-u-sm-3 am-u-md-2 timeline-span"><{$v3.create_time}></span>
+                            <span class="am-u-sm-9 am-u-md-6">
+                                {if mb_strlen($v3.article_title,'utf8')>=30}
+                                <a href="/article/<{$v3.article_id}>"><{$v3.article_title|mb_substr=0,30,'utf8'}>...</a>
+                                {else}
+                                <a href="/article/<{$v3.article_id}>"><{$v3.article_title}></a>
+                                {/if}
+                            </span>
+                        {/if}
                     </li>
-                    {/volist}
+                {/volist}
                 </ul>
+                <br>
             {/volist}
         </div>
         {/volist}

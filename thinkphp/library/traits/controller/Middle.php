@@ -16,13 +16,14 @@ trait Middle
 		$site_info = getSiteInfo(['domain'=>$domain]);
 		if($site_info)
 		{
-			if(empty($site_info['outsetup'])){
-            	$this->redirect("http://yuhal.com/error");    
-            }else{
-            	foreach (json_decode($site_info['outsetup']) as $key => $value) {
-	                $site_info[$key] = $value;
-	            }	
-            }
+			foreach ($site_info as $key => $value) {
+				$jsonData = json_decode($value,true);
+				if(is_array($jsonData)){
+					foreach ($jsonData as $key => $value) {
+						$site_info[$key] = $value;
+					}
+				}
+			}
         	return $site_info;
         }else
         {
