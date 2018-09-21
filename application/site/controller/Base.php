@@ -35,6 +35,7 @@ class Base extends Controller
         $this->Article = model('site/Article');
         $this->ArticleType = model('site/ArticleType');
         $this->ArticleTags = model('site/ArticleTags');
+        $this->Sdk = model('site/Sdk');
         $this->pageSize = config('paginate.list_rows');
         
         $this->assign('Tag',$this->ArticleTags->getAllTags());

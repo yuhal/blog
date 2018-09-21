@@ -219,15 +219,6 @@ function ishav_str_array($strstr,$str){
 }
 
 /**
- * 随机查询博客分组下的的一张图片
- * @access pubic
- * @return data
- */
-function getOnePicturesByGroupName(){
-    return db('picture')->where('group_id',1)->order('rand()')->value('path');
-}
-
-/**
  * 随机查询最新资讯
  * @access pubic
  * @return data

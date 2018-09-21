@@ -107,14 +107,6 @@ class Index extends Base
     public function timeline()
     {
         $file = $this->Article->getAllArticleByYear();
-        if(is_mobile_request()==false){
-
-        }else{
-            foreach ($file as $key => $value) {
-                
-                $file[$key]['']
-            }
-        }
         $this->assign('file',$file);
         return $this->fetch();
     }

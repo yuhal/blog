@@ -28,6 +28,7 @@ class Article extends Model{
     function __construct(){
         $this->expire_time = config('redis.expire_time');
         $this->site_info = session('site_info');
+        $this->Sdk = model('site/Sdk');
     }
 
     /**
@@ -93,7 +94,7 @@ class Article extends Model{
         ->select();
         if($data){
             foreach ($data as $key => $value) {
-                $data[$key]['pic'] = getOnePicturesByGroupName();
+                $data[$key]['pic'] = $this->Sdk->getRandPicture();
                 if(!$value['note']) $data[$key]['note'] = $this->getNoteByArticleid($value['article_id']);
             }  
             return $data;  
@@ -119,7 +120,7 @@ class Article extends Model{
             ->select();
         if($data){
             foreach ($data as $k=>$v){
-                $data[$k]['pic'] = getOnePicturesByGroupName();
+                $data[$k]['pic'] = $this->Sdk->getRandPicture();
                 $arr = ishav_str_array(',',$v['tag_ids']);
                 if(!in_array($tag_id,$arr)){
                     unset($data[$k]);

@@ -24,7 +24,7 @@ class Category extends Base
         $where['type_id'] = $list['id'];
         $allart = $this->ArticleType->getArticle()->where($where)->select();
         foreach ($allart as $key => $value) {
-             $allart[$key]['pic'] = getOnePicturesByGroupName();
+             $allart[$key]['pic'] = $this->Sdk->getRandPicture();
         }
         $this->assign('list',$list);
         $this->assign('allart',$allart);

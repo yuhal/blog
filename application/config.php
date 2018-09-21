@@ -281,6 +281,13 @@ $config = [
     'blog'    =>  [
         'pgn' =>  '博客',
     ],
+    //sdk
+    'sdk'       =>[
+        'qiniu_sdk' =>  [
+            'accessKey' =>  '',
+            'secretKey' =>  '',
+        ],    
+    ],
 ];
 //$config['view_replace_str'] = SessionToStr();
 
