@@ -33,16 +33,16 @@ class Sdk extends Model{
                         $re = (new \qiniu\QiniuSdk($qiniu_sdk))->listFiles();
                         if(isset($re[0]['items'])){
                             $pictures = array_column($re[0]['items'], 'key');
+                            foreach ($pictures as $key => $value) {
+                                $pictures[$key] = 'http://'.$domain.'/'.$value;  
+                            }
                         }
                     }
                 }
             }
         }    
-        if(isset($pictures)){
-            $key = array_rand($pictures);
-            return 'http://'.$domain.'/'.$pictures[$key];  
-        }
-        return false;
+        $key = array_rand($pictures);
+        return $pictures[$key];  
     }
 
 }
