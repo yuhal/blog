@@ -45,7 +45,7 @@ class Sdk extends Model{
             $key = array_rand($pictures);
             return $pictures[$key];      
         }else{
-            return 'http://photo.yuhal.com/9eed592a9f8ec5b0a4e56e8fbb8a0e07.png';
+            return 'http://118.31.23.98/ocean/static/images/default-1.jpg';
         }   
     }
 
