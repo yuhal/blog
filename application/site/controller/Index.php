@@ -41,17 +41,16 @@ class Index extends Base
      * @param id
      */
     public function about(){
-        $id = $this->Article->where('article_title',request()->instance()->action())->value('article_id');
-        $where['article_id'] = $id;
-        $where['user_id'] = $this->site_info['id'];
-        $content = $this->Article->getArticleByWhere($where);
-        if(empty($content))
+        if(empty($this->site_info))
         {
             $this->redirect('/error');
         }
-        $content['des'] = $this->Article->getDes()->where("article_id={$id}")->select();
+        $content['article_title'] = 'About';
+        $content['create_time'] = $this->site_info['update_time'];
+        $content['note'] = $this->site_info['sign'];
+        $content['des'] = $this->site_info['introduce'];  
         $this->assign('content',$content);
-        return $this->fetch('index/about');
+        return $this->fetch('index/label');
     }
 
     /**
@@ -92,7 +91,7 @@ class Index extends Base
                 $fetch = '';
                 break;
             case 1:
-                $fetch = 'index/about';
+                $fetch = 'index/label';
                 break;
             case 2:
                 $fetch = 'index/full';
