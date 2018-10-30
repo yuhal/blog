@@ -18,7 +18,8 @@ class Sdk extends Model{
      * @access pubic
      * @return data
      */
-    public function getRandPicture(){
+    public function getRandPicture()
+    {
         config('sdk.qiniu_sdk',$this->getSdkInfoByWhere(array('sdk_name'=>'qiniu_sdk')));
         $qiniu_sdk = config('sdk.qiniu_sdk');
         $Qiniu = new \qiniu\QiniuSdk($qiniu_sdk);
@@ -34,7 +35,7 @@ class Sdk extends Model{
                         if(isset($re[0]['items'])){
                             $pictures = array_column($re[0]['items'], 'key');
                             foreach ($pictures as $key => $value) {
-                                $pictures[$key] = 'http://'.$domain.'/'.$value;  
+                                $pictures[$key] = $domain.'/'.$value;  
                             }
                         }
                     }
@@ -45,7 +46,7 @@ class Sdk extends Model{
             $key = array_rand($pictures);
             return $pictures[$key];      
         }else{
-            return 'http://118.31.23.98/ocean/static/images/default-1.jpg';
+            return '/public/static/images/01.jpg';
         }   
     }
 

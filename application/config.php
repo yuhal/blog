@@ -10,22 +10,7 @@
 // +----------------------------------------------------------------------
 use think\Session;
 
-// function SessionToStr(){ 
-//   $domain = Session::get('domain');
-//   $site_info = Session::get('site_info'.$domain);
-//   var_dump('<pre>',$site_info);exit;
-//   $info = '';
-//   foreach ($site_info as $key => $value) {
-//       $info['__'.strtoupper($key).'__'] = $value;
-//   }
-//   $arr = [
-//         '__STATIC__'    =>  '/public/static',
-//         '__APP__'   =>  '/index.php',
-//     ];
-//   $view_replace_str = array_merge($info,$arr);
-//   return $view_replace_str; 
-// }
-$config = [
+return [
     // +----------------------------------------------------------------------
     // | 应用设置
     // +----------------------------------------------------------------------
@@ -256,30 +241,10 @@ $config = [
         'var_page'  => 'page',
         'list_rows' => 5,
     ],  
-    //微信配置
-    'wechat'        =>[
-        'appid' =>  'wxdccd7f02c452e6ce',
-        'appsecret' =>  '2eec27998a38ed13589e91414473e425',
-        'callback'=>'http://www.yuhal.com/wxconnect',
-        'openid'    =>  'opq8Y1SXvx-2JtJyBCVO-0sWNK0s'
-    ],
-    //api配置
-    'api'        =>[
-        'appid' =>  '15736736889',
-        'appsecret' =>  '13d16d22bb7ebd6803d541e6ec253b9f',
-    ],
-    //redis配置 
-    'redis'     =>[
-        'expire_time' => 3600
-    ],
     //配置404页面
     'http_exception_template'    =>  [
         404 =>  APP_PATH.'404.html',
         401 =>  APP_PATH.'401.html',
-    ],
-    //博客配置
-    'blog'    =>  [
-        'pgn' =>  '博客',
     ],
     //sdk
     'sdk'       =>[
@@ -289,6 +254,4 @@ $config = [
         ],    
     ],
 ];
-//$config['view_replace_str'] = SessionToStr();
 
-return $config;

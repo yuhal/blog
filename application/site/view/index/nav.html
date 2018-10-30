@@ -5,7 +5,6 @@
   <div class="am-collapse am-topbar-collapse" id="blog-collapse">
     <ul id="topbar" class="am-nav am-nav-pills am-topbar-nav">
       <li class="am-active"> <a style="cursor: pointer;" href="/"><i class="am-icon-home am-icon-fw"></i>首页</a></li>
-      <!--<li><a href="/photo">相册</a></li>-->
       <li><a href="/timeline"><i class="am-icon-archive am-icon-fw"></i>归档</a></li>
       <li><a href="/about"><i class="am-icon-angellist am-icon-fw"></i>关于</a></li>
     </ul>
@@ -17,21 +16,5 @@
   </div>
 </nav>
 <hr>
-<script type="text/javascript">
-    var test = window.location.href;
-    var host = 'http://'+window.location.host;  
-    switch(window.location.href)
-    {
-    case host+'/timeline':
-      $("#topbar li:eq(1)").addClass("am-active");
-      $("#topbar li:eq(0)").removeClass("am-active");
-      break;
-    case host+'/about':
-      $("#topbar li:eq(2)").addClass("am-active");
-      $("#topbar li:eq(0)").removeClass("am-active");
-      break; 
-    default:
-      $("#topbar li:eq(0)").addClass("am-active");
-    }       
-</script>
+
 <!-- nav end -->

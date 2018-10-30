@@ -40,7 +40,7 @@
 </div>
 <script>
     var test = window.location.href;
-    var host = 'http://'+window.location.host;  
+    var host = window.location.host;  
     var url = test.split('#')[0];
     switch(url)
     {
@@ -54,13 +54,13 @@
       $("#first_sidebar p").hide();    
       $("#first_sidebar a").attr('href','javascript:void(0);');  
       $("#first_sidebar img").attr('src','<{$site_info.wxqrcode}>');    
-      index();
+      change();
       break; 
     default:
       $("#topbar li:eq(0)").addClass("am-active");
       $("#first_sidebar h2 span").text("广告位");
       $("#second_sidebar").hide();
-      index();  
+      change();  
     }       
     $('#load').click(function (){
         var $btn = $(this);
@@ -70,29 +70,15 @@
         }, 500);
     });
     function change(){
-        $.ajax({
-            type: "GET",
-            url: '/ajax_information',
-            dataType: "json",
-            success: function (informationinfo) {
-                var html = "";
-                $.each(informationinfo, function(informationinfo, info){
-                    html+="<li><a href='"+info.url+"' target=''>"+info.title.substring(0,18)+"...</title></a></li>";
-                });
-                $("#information").html(html);
-            }
-        });
-    }
-    function index(){
         //加载最新资讯
         $.ajax({
             type: "GET",
-            url: "/ajax_information",
+            url: "<{$site_info.domain}>/getInformation",
             dataType: "json",
             success: function(informationinfo){
                 var html = "";
                 $.each(informationinfo, function(informationinfo, info){
-                    html+="<li><a href='"+info.url+"' target=''>"+info.title.substring(0,17)+"...</title></a></li>";
+                    html+="<li><a href='"+info.url+"' target=''>"+info.title.substring(0,18)+"...</title></a></li>";
                 });
                 $("#information").html(html);
             }

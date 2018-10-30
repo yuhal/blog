@@ -70,14 +70,6 @@ function getSiteInfo($where){
     return db('user')->field('pwd',true)->where($where)->find();
 }
 
-function check_app_true($data){
-   if($data['appid']==config('api.appid') && $data['appsecret']==config('api.appsecret')){
-      return true;
-   }else{
-      return false;
-   }
-}
-
 function http_request($url,$data=''){
     $ch=curl_init();//初始化（买电话）
     //设置参数
@@ -113,41 +105,6 @@ function getQrcode($url){
     header('Content-Type: '.$qrCode->getContentType());
     echo $qrCode->writeString();
     exit;
-}
-
-/**
- * 图片地址转化
- * @param string $value
- * @return data
- */
-function setpic($value){
-    if(is_array($value)){
-        foreach($value as $k=>$v){
-            $value[$k]['pic'] = if_pic($v['pic']);
-        }
-    }else{
-        $value = if_pic($value);
-    }
-    return $value;
-}
-/**
- * 判断是否是网络图片
- * @param string $value
- * @param string $os_name
- */
-function if_pic($value,$os_name=PHP_OS){
-    if($value){
-        if(substr($value,0,4) == 'http'){
-            return $value;
-        }else{
-            if(strpos($os_name,"Linux")!==false){
-                return 'http://'.$_SERVER['HTTP_HOST'].'/public/'.$value;
-            }
-            return 'http://'.$_SERVER['HTTP_HOST'].'/'.$value;
-        }
-    }else{
-        return false;
-    }
 }
 
 function unsetArrayElement($arr,$key){

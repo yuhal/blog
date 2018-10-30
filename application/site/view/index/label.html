@@ -9,9 +9,11 @@
             <div class="am-article-hd">
               <h1 class="am-article-title blog-text-center"><{$content.article_title}></h1>
               <p class="am-article-meta blog-text-center">
+                {if isset($content.color) && isset($content.value)}
                 <span>
                 <a style="color: <{$content.color}>;" href="/categories/<{$content.value}>" class="blog>"><{$content.value}> </a>
                 </span>-
+                {/if}
                 <span><a href="javascript:void(0);"><i class="am-icon-clock-o"></i><{$content.create_time}></a></span>
               </p>
             </div>
@@ -32,5 +34,22 @@
             </div>
           </article>        
         <hr>
-    </div>   
+    </div>
+    <!-- Link Gitalk 的支持文件  -->
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+    <div id="gitalk-container"></div>    
+    <script type="text/javascript">
+        var gitalk = new Gitalk({
+        // gitalk的主要参数
+            clientID: '50514e611d34ed247eff',
+            clientSecret: '5e38682c223a53c26ef7f1bf8c00de23b4f932e8',
+            repo: 'yuhal.github.io',
+            owner: 'yuhal',
+            admin: ['yuhal'],
+            id:decodeURI(window.location.pathname),
+        });
+        gitalk.render('gitalk-container');
+    </script>
+    <!-- Gitalk end -->
 {/block}   

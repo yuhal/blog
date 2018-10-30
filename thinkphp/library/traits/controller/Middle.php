@@ -27,7 +27,7 @@ trait Middle
         	return $site_info;
         }else
         {
-        	$this->redirect("http://yuhal.com/error");
+        	$this->redirect("https://yuhal.com/error");
         }
 
 	}

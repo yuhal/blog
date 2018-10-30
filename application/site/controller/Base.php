@@ -25,9 +25,9 @@ class Base extends Controller
     public function __construct()
     {     
         parent::__construct();
-
         //验证站点信息
         $this->site_info = $this->checkdomain();
+        $this->site_info['domain'] = 'https://www.yuhal.com';
         session('site_info',$this->site_info);
         $this->assign('site_info',$this->site_info);
         //初始化model
@@ -37,49 +37,17 @@ class Base extends Controller
         $this->ArticleTags = model('site/ArticleTags');
         $this->Sdk = model('site/Sdk');
         $this->pageSize = config('paginate.list_rows');
-        
         $this->assign('Tag',$this->ArticleTags->getAllTags());
     }
 
     /**
-     * Ajax获取最新资讯
+     * 获取最新资讯
      */
-    public function ajax_information(){
-        if(request()->isAjax())
-        {
+    public function getInformation(){
+        if(request()->isAjax()){
            return getRandInformation();
         }
     }
-
-    /**
-     * Ajax获取标签
-     */
-    public function ajax_tag(){
-        if(request()->isAjax())
-        {
-           return $this->ArticleTags->taginfo();
-        }
-    }
-
-    /**
-     * Ajax获取站点信息
-     */
-    public function ajax_siteinfo(){
-        if(request()->isAjax())
-        {
-           return $this->checkdomain();
-        }
-    }   
-
-    /**
-     * Ajax获取广告信息
-     */
-    public function ajax_sponsorinfo(){
-        if(request()->isAjax())
-        {
-           return 520;
-        }
-    }  
 
     /**
      * 404页面
@@ -87,10 +55,6 @@ class Base extends Controller
     public function error_page($msg=404){
         return view('public/error',['msg'=>'Sorry, the page you visited did not exist!','code'=>404]);
     }
-
-
-
-
 
 
 }

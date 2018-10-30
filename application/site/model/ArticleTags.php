@@ -20,7 +20,8 @@ class ArticleTags extends Model{
     /**
 	 * 查询所有的标签
 	 */
-	public function getAllTags(){
+	public function getAllTags()
+	{
 	    return $this->field("value")->order("update_time desc")->select();
     }
 }

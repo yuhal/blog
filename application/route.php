@@ -26,17 +26,9 @@ return [
         'about'              => 'site/index/about',
     /*********归档*********/
         'timeline'	         =>	'site/index/timeline',
-    /*********ajax*********/
-        //标签信息
-        'ajax_tag'           => 'site/base/ajax_tag',
+    /*********api*********/
         //最新咨询信息
-        'ajax_information'   => 'site/base/ajax_information',
-        //站点信息
-        'ajax_siteinfo'      => 'site/base/ajax_siteinfo',
-        //广告信息
-        'ajax_sponsorinfo'   => 'site/base/ajax_sponsorinfo',
-    /**********管理中心*********/
-        'ocean'              => 'site/index/ocean',
+        'getInformation'     => 'site/base/getInformation',
     /*********pub*********/
         //空路由
         '__MISS__'           => 'site/base/error_page', 

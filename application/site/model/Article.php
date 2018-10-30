@@ -6,11 +6,6 @@ use traits\model\SoftDelete;
 class Article extends Model{
 
     /**
-     * 使用软删除
-     */
-    use softdelete;
-
-    /**
      * 设置当前模型对应的完整数据表名称
      */
     protected $table = 'yh_article';
@@ -26,7 +21,6 @@ class Article extends Model{
      * 初始化操作
      */
     function __construct(){
-        $this->expire_time = config('redis.expire_time');
         $this->site_info = session('site_info');
         $this->Sdk = model('site/Sdk');
     }
