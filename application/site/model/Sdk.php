@@ -35,7 +35,8 @@ class Sdk extends Model{
                         if(isset($re[0]['items'])){
                             $pictures = array_column($re[0]['items'], 'key');
                             foreach ($pictures as $key => $value) {
-                                $pictures[$key] = $domain.'/'.$value;  
+                                $baseUrl = 'https://'.$domain.'/'.$value;//普通图
+                                $pictures[$key] = (new \qiniu\QiniuSdk($qiniu_sdk))->privateDownloadUrl(['baseUrl'=>$baseUrl]);
                             }
                         }
                     }
