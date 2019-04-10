@@ -43,7 +43,7 @@ class Sdk extends Model{
                 }
             }
         }    
-        if($pictures){
+        if(isset($pictures) && $pictures){
             $key = array_rand($pictures);
             return $pictures[$key];      
         }else{
