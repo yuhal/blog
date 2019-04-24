@@ -11,27 +11,30 @@
 
 return [
     '__pattern__' => [
-        'id'   => '\d+',
-        'p'    => '\d+',
+        'id'   =>'\d+',
+        'p'    =>'\d+',
     ],
     /*********首页*********/
-        'index'              => 'site/index/index',
+        'index'=>'site/index/index',
     /*********详情页*********/
-        'article/:id'	     =>	'site/index/article',
+        'article/:id'=>'site/index/article',
     /*********分类页*********/
-        'categories/:cate'	 =>	'site/category/index',
+        'categories/:cate'=>'site/category/index',
     /*********标签页*********/
-        'tag/:tag'	         =>	'site/tag/index',
+        'tag/:tag'=>'site/tag/index',
     /*********关于*********/
-        'about'              => 'site/index/about',
+        'about'=>'site/index/about',
     /*********归档*********/
-        'timeline'	         =>	'site/index/timeline',
-    /*********api*********/
+        'timeline'=>'site/index/timeline',
+    /*********今日头条*********/
         //最新咨询信息
-        'getInformation'     => 'site/base/getInformation',
+        'getInformation'=>'site/base/getInformation',
+    /*********Api*********/
+        'api/listArticle/[:p]'=>'site/api/listArticle',
+        'api/article/:article_id'=>'site/api/article',
     /*********pub*********/
         //空路由
-        '__MISS__'           => 'site/base/error_page', 
+        '__MISS__'=>'site/base/error_page', 
         //error页面
-        'error/[:msg]'       => 'site/base/error_page',
+        'error/[:msg]'=>'site/base/error_page',
 ];

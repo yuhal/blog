@@ -23,6 +23,7 @@ class Article extends Model{
     function __construct(){
         $this->site_info = session('site_info');
         $this->Sdk = model('site/Sdk');
+        $this->ArticleTags = model('site/ArticleTags');
     }
 
     /**
@@ -71,7 +72,7 @@ class Article extends Model{
 	}
 
 	/**
-	 * 查询所有的文章
+	 * 分页查询所有的文章
 	 * @param $p
      * @param $where
      * @param $pageSize
@@ -96,6 +97,34 @@ class Article extends Model{
             return '';
         }
 	}
+
+    /**
+     * 查询所有的文章
+     */
+    public function getAllArticle()
+    {
+        $data = $this->alias('a')
+        ->join('article_type b','b.id=a.type_id')
+        ->field('a.article_id,a.tag_ids,a.article_title,a.create_time,a.note,b.value,b.color')
+        ->order('a.create_time desc')
+        ->select();
+        if($data){
+            foreach ($data as $key => $value) {
+                $data[$key]['pic'] = $this->Sdk->getRandPicture();
+                if(!$value['note']) $data[$key]['note'] = $this->getNoteByArticleid($value['article_id']);
+                $arr = ishav_str_array(',',$value['tag_ids']);
+                $tags = [];
+                foreach ($arr as $k=>$v){
+                    $tags[$k]['tag_id'] = $v;
+                    $tags[$k]['tag_name'] = $this->ArticleTags::getbyid($v)['value'];
+                }
+                $data[$key]['tags'] = $tags;
+            }  
+            return $data;  
+        }else{
+            return '';
+        }
+    }
 
     public function getArticleCount($where){
         return $this->alias('a')->where($where)->count();
