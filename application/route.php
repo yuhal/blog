@@ -32,6 +32,7 @@ return [
     /*********Api*********/
         'api/listArticle/[:p]'=>'site/api/listArticle',
         'api/article/:article_id'=>'site/api/article',
+        'api/listImage/:bucket'=>'site/api/listImage',
     /*********pub*********/
         //空路由
         '__MISS__'=>'site/base/error_page', 
