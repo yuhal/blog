@@ -28,7 +28,7 @@ class QiniuSdk{
 	    			return $this->bucketMgr->domains($this->sdk_info['bucket']);
 	    		break;
 				case 'listFiles':
-	    			return $this->bucketMgr->listFiles($this->sdk_info['bucket']);
+	    			return $this->bucketMgr->listFiles($this->sdk_info['bucket'],'yuhal-picture');
 	    		break;
 	    		case 'rename':
 	    			return $this->bucketMgr->rename($this->sdk_info['bucket'],$arguments['oldname'],$arguments['newname']);
